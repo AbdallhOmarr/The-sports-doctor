@@ -56,3 +56,8 @@ def register(request):
             # messages.error(request, "An Error occured during registeration!")
     context = {'form': form, "key": "register"}
     return render(request, "login_register.html", context)
+
+
+def select_user_type(request):
+    context={}
+    return render(request,"userselection.html",context)

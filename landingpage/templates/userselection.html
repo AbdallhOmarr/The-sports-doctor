@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block title %}Login{% endblock %} {% block body %}
+<div class="container">
+  <div class="card-group mt-5 h-25">
+    <div class="card trainer-card">
+      <div class="card-body">
+        <h4 class="card-title">Trainer</h4>
+        <p class="card-text">Sign up as a trainer</p>
+      </div>
+    </div>
+    <div class="card trainee-card">
+      <div class="card-body">
+        <h4 class="card-title">Trainee</h4>
+        <p class="card-text">Sign up as a trainee</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const trainerCard = document.querySelector(".trainer-card");
+  const traineeCard = document.querySelector(".trainee-card");
+
+  trainerCard.addEventListener("click", function () {
+    trainerCard.classList.add("active");
+    traineeCard.classList.remove("active");
+  });
+
+  traineeCard.addEventListener("click", function () {
+    traineeCard.classList.add("active");
+    trainerCard.classList.remove("active");
+  });
+</script>
+
+{% endblock %}

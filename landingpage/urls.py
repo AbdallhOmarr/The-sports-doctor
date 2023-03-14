@@ -22,5 +22,5 @@ urlpatterns = [
     path("login",views.loginView,name="login"),
     path('logout', views.logoutView, name='logout'),
     path('register', views.register, name='register'),
-
+    path('accounttype',views.select_user_type,name="user_selection_type")
 ]
