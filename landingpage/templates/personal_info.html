@@ -5,43 +5,44 @@
             <div class="col-3">
                 <div class="form-group">
                     <div class="text-left">Username</div>
-                    <input type="text" name="username" id="username" class='form-control' placeholder="Username" disabled>
-                </div>           
-            
-            </div>           
+                    <input type="text" name="username" id="username" class='form-control' placeholder="Username"
+                        disabled>
+                </div>
+
+            </div>
         </div>
         <div class="row my-3">
             <div class="col-6 ">
                 <div class="text-left">First Name</div>
-                <input type="text" name="first_name" id="first_name" class="form-control" placeholder = "First Name">
+                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
             </div>
             <div class="col-6 ">
                 <div class="text-left">Last Name</div>
-                <input type="text" name="last_name" id="last_name" class="form-control" placeholder = "Last Name">
+                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
             </div>
         </div>
         <div class="row my-3">
             <div class="col-6 ">
                 <div class="text-left">Email</div>
-                <input type="text" name="email" id="email" class="form-control" placeholder = "Your email">
+                <input type="text" name="email" id="email" class="form-control" placeholder="Your email">
             </div>
             <div class="col-6 ">
                 <div class="text-left">Mobile</div>
-                <input type="text" name="mobile" id="mobile" class="form-control" placeholder = "Your mobile">
+                <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Your mobile">
             </div>
-            
+
         </div>
         <div class="row my-3">
             <div class="col ">
                 <div class="text-left">Address</div>
-                <input type="text" name="address" id="address" class="form-control" placeholder = "Your Address">
+                <input type="text" name="address" id="address" class="form-control" placeholder="Your Address">
             </div>
 
         </div>
         <div class="row my-3">
             <div class="col-6 ">
                 <div class="text-left">Date of birth</div>
-                <input type="text" name="dateofbirth" id="dateofbirth" class="form-control" placeholder = "Date of Birth">
+                <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" placeholder="Date of Birth">
             </div>
             <div class="col-6 ">
                 <div class="text-left">Gender</div>
@@ -50,9 +51,34 @@
                     <option>Female</option>
                 </select>
             </div>
-            
+
+        </div>
+        <div class="row my-3">
+            <div class="col-6">
+                <div class="text-left">Change your Password</div>
+            </div>
         </div>
 
+        <div class="row my-3">
+            <div class="col-6 ">
+                <input type="password" name="password1" id="password1" class="form-control"
+                    placeholder="Enter new password">
+            </div>
+            <div class="col-6 ">
+                <input type="password" name="password2" id="password2" class="form-control"
+                    placeholder="Confirm password">
+            </div>
+
+        </div>
+        <div class="row my-3">
+            <div class="col">
+
+                <div type="submit" value="Submit" class="btn btn-secondary w-100">
+                    Update
+                </div>
+            </div>
+
+        </div>
     </form>
     {% if messages %}
     <ul class="messages">
