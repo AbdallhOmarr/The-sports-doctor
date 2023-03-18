@@ -375,19 +375,19 @@ h3 {
   justify-content: center;
   height: 100%; /* set height to 100% to fill the parent container */
 }
-.card-body:hover {
+.hovercard:hover {
   cursor: pointer;
   background-color: #f8f9fa;
 }
 
 .card.trainer-card.active,
 .card.trainee-card.active {
-  border: 2px solid #007bff;
+  border: 2px solid #333;
 }
 
 .card.trainer-card.active .card-body,
 .card.trainee-card.active .card-body {
-  background-color: #007bff;
+  background-color: #333;
   color: #fff;
 }
 
@@ -402,5 +402,5 @@ h3 {
 
 .card.trainer-card .card-body:hover .card-title,
 .card.trainee-card .card-body:hover .card-title {
-  color: #007bff;
+  color: #333;
 }

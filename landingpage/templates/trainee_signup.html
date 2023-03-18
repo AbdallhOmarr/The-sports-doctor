@@ -1,0 +1,86 @@
+{% extends 'base.html' %} {% block title %}Trainee - Sign up{% endblock %} {% block body %}
+
+<div class="card bg-light">
+    <div class="card-body">
+        <h5 class="card-title">Trainee Signup</h5>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="text-left">{{ form.username.label_tag }}</div>
+                        {{ form.username }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.email.label_tag }}</div>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.mobile.label_tag }}</div>
+                        {{ form.mobile }}
+                    </div>
+
+                    <div class="form-group">
+                        <div class="text-left">{{ form.first_name.label_tag }}</div>
+                        {{ form.first_name }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.last_name.label_tag }}</div>
+                        {{ form.last_name }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.address.label_tag }}</div>
+                        {{ form.address }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.city.label_tag }}</div>
+                        {{ form.city }}
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="text-left">{{ form.dateofbirth.label_tag }}</div>
+                        {{ form.dateofbirth }}
+                    </div>
+
+                    <div class="form-group">
+                        <div class="text-left">{{ form.weight.label_tag }}</div>
+                        {{ form.weight }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.height.label_tag }}</div>
+                        {{ form.height }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.gender.label_tag }}</div>
+                        {{ form.gender }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.password1.label_tag }}</div>
+                        {{ form.password1 }}
+                    </div>
+                    <div class="form-group">
+                        <div class="text-left">{{ form.password2.label_tag }}</div>
+                        {{ form.password2 }}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group m-2">
+                <input name="account_type" type="hidden" value="trainee">
+                <input type="submit" value="Submit" class="btn btn-secondary w-60" />
+            </div>
+        </form>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+        </ul>
+        {% endif %}
+
+    </div>
+</div>
+
+
+
+{% endblock %}

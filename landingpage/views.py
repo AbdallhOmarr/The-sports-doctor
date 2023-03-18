@@ -4,12 +4,12 @@ from django.contrib import messages
 from . import forms
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-# Create your views here.
-
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     context = {}
     return render(request, "home.html", context)
+
 
 def loginView(request):
     print("login ")
@@ -29,6 +29,7 @@ def loginView(request):
         else:
             messages.error(request, "Password is incorrect")
 
+
     context = {"key": "login"}
     return render(request, "login_register.html", context)
 
@@ -40,24 +41,74 @@ def logoutView(request):
 
 
 def register(request):
+    trainee_form = forms.TraineeSignupForm()
+    trainer_form = forms.TrainerSignupForm()
+    context = {'trainee_form': trainee_form,
+                       'trainer_form': trainer_form, "key": "register"}
 
-    form = forms.UserCreateForm()
-    if request.method == 'POST':
-        form = forms.UserCreateForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
+    if request.method == 'POST' and request.POST.get("account_type") == "trainee":
+        trainee_form = forms.TraineeSignupForm(request.POST)
+        if trainee_form.is_valid():
+            user = trainee_form.save(commit=False)
             user.username = user.username.lower()
             user.email = user.email.lower()
             user.save()
             login(request, user)
-            return redirect("/")
+            context = {'trainee_form': trainee_form,
+                       'trainer_form': trainer_form, "key": "register"}
+            return render(request, "home.html", context)
         else:
-            pass
-            # messages.error(request, "An Error occured during registeration!")
-    context = {'form': form, "key": "register"}
-    return render(request, "login_register.html", context)
+            for field, errors in trainee_form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{field}: {error}")
+            print("trainer form is not valid")
+            context = {'trainee_form': trainee_form,
+                       'trainer_form': trainer_form, "key": "register"}
 
+            return trainee_signup(request)
 
+    elif request.method == 'POST' and request.POST.get("account_type") == "trainer":
+        trainer_form = forms.TrainerSignupForm(request.POST)
+        if trainer_form.is_valid():
+            user = trainer_form.save(commit=False)
+            user.save()
+            print("trainer saved")
+            login(request, user)
+            context = {'trainee_form': trainee_form,
+                       'trainer_form': trainer_form, "key": "register"}
+            return render(request, "home.html", context)
+        else:
+            for field, errors in trainer_form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{field}: {error}")
+            print("trainer form is not valid")
+            context = {'trainee_form': trainee_form,
+                       'trainer_form': trainer_form, "key": "register"}
+
+            return trainer_signup(request)
+            
 def select_user_type(request):
-    context={}
-    return render(request,"userselection.html",context)
+    context = {}
+    return render(request, "userselection.html", context)
+
+
+def trainee_signup(request):
+    form = forms.TraineeSignupForm()
+    context = {'form': form, "key": "register"}
+
+    print("trainee ")
+    return render(request, "trainee_signup.html", context)
+
+
+def trainer_signup(request):
+    form = forms.TrainerSignupForm()
+    context = {'form': form, "key": "register"}
+    print("trainer ")
+    return render(request, "trainer_signup.html", context)
+
+
+@login_required
+def profile(request):
+    context = {}
+    print("here's my profile")
+    return render(request, "profile.html",context)
