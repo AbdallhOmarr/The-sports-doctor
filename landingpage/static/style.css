@@ -404,3 +404,24 @@ h3 {
 .card.trainee-card .card-body:hover .card-title {
   color: #333;
 }
+
+
+/* Change the background color of inactive tabs */
+/* .nav-tabs:not(.active) .nav-link {
+  background-color: #f1f1f1;
+} */
+
+/* Change the text color of inactive tabs */
+.nav-tabs:not(.active) .nav-link {
+  color: #333;
+}
+
+/* Change the background color of the active tab */
+.nav-tabs .nav-link.active {
+  background-color: #333;
+}
+
+/* Change the text color of the active tab */
+.nav-tabs .nav-link.active {
+  color: #fff;
+}

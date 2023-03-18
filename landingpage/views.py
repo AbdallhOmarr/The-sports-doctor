@@ -110,5 +110,7 @@ def trainer_signup(request):
 @login_required
 def profile(request):
     context = {}
+    #pass user info form
+    
     print("here's my profile")
     return render(request, "profile.html",context)
