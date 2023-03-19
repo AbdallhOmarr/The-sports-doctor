@@ -2,59 +2,69 @@
 
 
 {% block title %} The sports doctor - Profile {% endblock %} {% block body %}
-    <div class="card">
-        <div class="card-header">
- <!-- Nav tabs -->
- <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" data-bs-toggle="tab" href="#personal-info">Personal Information</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#subscriptions">Subscriptions</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#medical-history">Medical History</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#physical-assessment">Physical Assessment</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#treatment-plan">Treatment Plan</a>
-    </li>
-  </ul>
+<div class="card">
+  <div class="card-header">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" href="#notifications">Notifications</a>
+      </li>
 
-        </div>
-        <div class="card-body">
+      <li class="nav-item">
+        <a class="nav-link " data-bs-toggle="tab" href="#personal-info">Personal Information</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#subscriptions">Subscriptions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#medical-history">Medical History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#physical-assessment">Physical Assessment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#treatment-plan">Treatment Plan</a>
+      </li>
+
+    </ul>
+
+  </div>
+  <div class="card-body">
     <!-- Tab panes -->
     <div class="tab-content">
-        <div class="tab-pane active" id="personal-info">
-          <!-- Personal Information form fields -->
-            {% include 'personal_info.html' %}
-        </div>
-        <div class="tab-pane" id="subscriptions">
-          <!-- Subscriptions form fields -->
-            {% include 'subscriptions.html' %}
-        </div>
-        <div class="tab-pane" id="medical-history">
-          <!-- Medical History form fields -->
-            {% include 'medical_history.html' %}
-        </div>
-        <div class="tab-pane" id="physical-assessment">
-          <!-- Physical Assessment form fields -->
-          {% include 'physical_assessment.html' %}
-        </div>
-        <div class="tab-pane" id="treatment-plan">
-          <!-- Treatment Plan form fields -->
-          {% include 'treatment_plan.html' %}
-        </div>
+      <div class="tab-pane active" id="notifications">
+        <!-- Treatment Plan form fields -->
+        {% include 'notifications.html' %}
       </div>
 
-        </div>
-   
+      <div class="tab-pane" id="personal-info">
+        <!-- Personal Information form fields -->
+        {% include 'personal_info.html' %}
+      </div>
+      <div class="tab-pane" id="subscriptions">
+        <!-- Subscriptions form fields -->
+        {% include 'subscriptions.html' %}
+      </div>
+      <div class="tab-pane" id="medical-history">
+        <!-- Medical History form fields -->
+        {% include 'medical_history.html' %}
+      </div>
+      <div class="tab-pane" id="physical-assessment">
+        <!-- Physical Assessment form fields -->
+        {% include 'physical_assessment.html' %}
+      </div>
+      <div class="tab-pane" id="treatment-plan">
+        <!-- Treatment Plan form fields -->
+        {% include 'treatment_plan.html' %}
+      </div>
+    </div>
 
-      <script>
-        var tabs = new bootstrap.Tab(document.querySelector('#myTabs'))
-        tabs.show()
-      </script>
-      
-      {% endblock %}
+  </div>
+
+
+  <script>
+    var tabs = new bootstrap.Tab(document.querySelector('#myTabs'))
+    tabs.show()
+  </script>
+
+  {% endblock %}
