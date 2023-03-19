@@ -13,6 +13,8 @@
           "editor.defaultFormatter": "ms-python.black-formatter",
           "editor.formatOnSave": true
 
-        }
+        },
+        "appService.defaultWebAppToDeploy": "/subscriptions/601ae23c-2b9b-4711-8c14-f23172a914d7/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/the-sports-doctor",
+        "appService.deploySubpath": "."
       
 }
