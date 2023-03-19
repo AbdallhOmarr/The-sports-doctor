@@ -6,17 +6,27 @@
       <div class="card-body">
         <form action="" method="post" class="">
           {% csrf_token %}
+          <div class="row">
+            <div class="col">
 
-          <div class="form-group m-2 text-left">
-            <label for="" class="sr-only">Username</label>
-            <input type="text" name="username" class="form-control" placeholder="Enter Username" />
+              <div class="form-group m-2 text-left">
+                <label for="" class="sr-only">Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Enter Username" />
 
-            <label for="" class="sr-only">Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Password" />
+                <label for="" class="sr-only">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password" />
+              </div>
+            </div>
+
           </div>
 
-          <div class="form-group">
-            <input type="submit" onsubmit="clearMsg()" value="Login" class="btn btn-secondary mb-2" />
+          <div class="row">
+            <div class="col m-2">
+              <div class="form-group">
+                <input type="submit" onsubmit="clearMsg()" value="Login" class="btn btn-secondary  w-100" />
+              </div>
+
+            </div>
           </div>
         </form>
 
