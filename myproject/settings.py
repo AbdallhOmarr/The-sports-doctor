@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-$1^g)0#%+$!_0%nwb3v%(frorn&#05oa1&gd7f!z9hr@8*3qc6"
+SECRET_KEY = "kjsdakfji34u2907417-$1^g)0#%+$!_0%nwb3v%(frorn&#05oa1&gd7f!z9hr@8*3qc6"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -142,3 +142,5 @@ MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 USE_X_FORWARDED_HOST = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True

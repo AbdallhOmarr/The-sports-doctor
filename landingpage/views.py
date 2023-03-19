@@ -5,12 +5,14 @@ from . import forms
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def home(request):
     context = {}
     return render(request, "home.html", context)
 
-
+@csrf_exempt
 def loginView(request):
     print("login ")
     if request.method == 'POST':
@@ -33,13 +35,13 @@ def loginView(request):
     context = {"key": "login"}
     return render(request, "login_register.html", context)
 
-
+@csrf_exempt
 def logoutView(request):
     print("logout")
     logout(request)
     return redirect("/")
 
-
+@csrf_exempt
 def register(request):
     trainee_form = forms.TraineeSignupForm()
     trainer_form = forms.TrainerSignupForm()
@@ -86,12 +88,14 @@ def register(request):
                        'trainer_form': trainer_form, "key": "register"}
 
             return trainer_signup(request)
-            
+
+
+@csrf_exempt         
 def select_user_type(request):
     context = {}
     return render(request, "userselection.html", context)
 
-
+@csrf_exempt
 def trainee_signup(request):
     form = forms.TraineeSignupForm()
     context = {'form': form, "key": "register"}
@@ -99,7 +103,7 @@ def trainee_signup(request):
     print("trainee ")
     return render(request, "trainee_signup.html", context)
 
-
+@csrf_exempt
 def trainer_signup(request):
     form = forms.TrainerSignupForm()
     context = {'form': form, "key": "register"}
@@ -107,6 +111,7 @@ def trainer_signup(request):
     return render(request, "trainer_signup.html", context)
 
 
+@csrf_exempt
 @login_required
 def profile(request):
     context = {}
