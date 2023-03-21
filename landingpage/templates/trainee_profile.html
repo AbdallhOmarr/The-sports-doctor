@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 
-{% block title %} The sports doctor - Profile {% endblock %} {% block body %}
+{% block title %} The sports doctor - Trainee Profile {% endblock %} {% block body %}
 <div class="card">
   <div class="card-header">
     <!-- Nav tabs -->
@@ -36,35 +36,50 @@
         <!-- Treatment Plan form fields -->
         {% include 'notifications.html' %}
       </div>
+    </div>
 
+    <div class="tab-content">
       <div class="tab-pane" id="personal-info">
         <!-- Personal Information form fields -->
         {% include 'personal_info.html' %}
       </div>
+    </div>
+
+    <div class="tab-content">
       <div class="tab-pane" id="subscriptions">
         <!-- Subscriptions form fields -->
         {% include 'subscriptions.html' %}
       </div>
+    </div>
+
+    <div class="tab-content">
       <div class="tab-pane" id="medical-history">
         <!-- Medical History form fields -->
         {% include 'medical_history.html' %}
       </div>
+    </div>
+
+    <div class="tab-content">
       <div class="tab-pane" id="physical-assessment">
         <!-- Physical Assessment form fields -->
         {% include 'physical_assessment.html' %}
       </div>
+    </div>
+
+    <div class="tab-content">
       <div class="tab-pane" id="treatment-plan">
         <!-- Treatment Plan form fields -->
         {% include 'treatment_plan.html' %}
       </div>
     </div>
-
   </div>
 
+</div>
 
-  <script>
-    var tabs = new bootstrap.Tab(document.querySelector('#myTabs'))
-    tabs.show()
-  </script>
 
-  {% endblock %}
+<script>
+  var tabs = new bootstrap.Tab(document.querySelector('#myTabs'))
+  tabs.show()
+</script>
+
+{% endblock %}

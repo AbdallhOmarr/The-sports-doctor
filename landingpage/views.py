@@ -3,9 +3,14 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from . import forms
 from django.contrib.auth.models import User
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from . import models
+from django.contrib.auth.models import Group
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 @csrf_exempt
 def home(request):
@@ -116,6 +121,36 @@ def trainer_signup(request):
 def profile(request):
     context = {}
     #pass user info form
-    
+    username = request.user
+    print(username)
+    user = models.User.objects.filter(username=username)
+    print(user[0])
+    if request.user.groups.filter(name='Trainer').exists():
+        # Do something if the user is a Trainer
+        return render(request, "trainer_profile.html",context)
+    elif request.user.groups.filter(name='Trainee').exists():
+        # Do something if the user is a Trainee
+        return render(request, "trainee_profile.html",context)
+    elif request.user.groups.filter(name='admin').exists():
+        print("admin")
+        # Do something else if the user is not a Trainer or Trainee
+        return render(request, "admin_profile.html",context)
     print("here's my profile")
-    return render(request, "profile.html",context)
+
+
+@receiver(post_save, sender=models.Trainer)
+def add_trainer_to_group(sender, instance, created, **kwargs):
+    if created:
+        group, created = Group.objects.get_or_create(name='Trainer')
+        group = Group.objects.get(name='Trainer')
+
+        instance.user.groups.add(group)
+
+@receiver(post_save, sender=models.Trainee)
+def add_trainee_to_group(sender, instance, created, **kwargs):
+    if created:
+        group, created = Group.objects.get_or_create(name='Trainee')
+        group = Group.objects.get(name='Trainee')
+        instance.user.groups.add(group)
+
+

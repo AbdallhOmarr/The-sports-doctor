@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+
+{% block title %} The sports doctor - Profile {% endblock %} {% block body %}
+<div class="card">
+  <div class="card-header">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" href="#notifications">Notifications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#trainers">Trainers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#trainees">Trainees</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#assign-trainers">Assign trainers</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="card-body">
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="notifications">
+        <!-- Treatment Plan form fields -->
+        {% include 'notifications.html' %}
+      </div>
+
+      <div class="tab-pane" id="trainers">
+        <!-- Treatment Plan form fields -->
+        {% include 'trainers.html' %}
+      </div>
+
+      <div class="tab-pane" id="trainees">
+        <!-- Treatment Plan form fields -->
+        {% include 'trainees.html' %}
+      </div>
+
+      <div class="tab-pane" id="assign-trainers">
+        <!-- Treatment Plan form fields -->
+        {% include 'assign_trainers.html' %}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  var tabs = new bootstrap.Tab(document.querySelector('#myTabs'))
+  tabs.show()
+</script>
+
+{% endblock %}

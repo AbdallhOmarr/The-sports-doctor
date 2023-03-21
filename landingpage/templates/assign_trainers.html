@@ -1,0 +1,31 @@
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    <div class="row justify-content-center my-3">
+        <div class="col-4 d-flex justify-content-center">
+            <div>
+                Assign Trainer to the trainee: Abdalla Omar
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center my-3">
+        <div class="col-4 d-flex justify-content-center">
+            <div class="form-group w-100">
+                <select name="subscriptions-plan" id="subscriptions-plan" class='form-control text-center '>
+                    <option value="" selected>Choose Trainer</option>
+                    <option value="plan1">Ahmed mohamed</option>
+                    <option value="plan2">ashraf ibrahim</option>
+                    <option value="plan3">mahmoud ahmed</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="btn btn-secondary w-100">
+                Assign
+            </div>
+        </div>
+    </div>
+</form>
