@@ -15,7 +15,7 @@ from django.dispatch import receiver
 @csrf_exempt
 def home(request):
     context = {}
-    return render(request, "home.html", context)
+    return render(request, "index.html", context)
 
 @csrf_exempt
 def loginView(request):
@@ -154,3 +154,7 @@ def add_trainee_to_group(sender, instance, created, **kwargs):
         instance.user.groups.add(group)
 
 
+
+def service_details(request):
+    context = {}
+    return render(request,"service-details.html",context)
