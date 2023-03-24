@@ -18,14 +18,18 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("",views.home),
-    path("login",views.loginView,name="login"),
-    path('logout', views.logoutView, name='logout'),
-    path('register', views.register, name='register'),
-    path('accounttype',views.select_user_type,name="user_selection_type"),
-    path('trainer_signup',views.trainer_signup,name="trainer_signup"),
-    path('trainee_signup',views.trainee_signup,name="trainee_signup"),
-    path('profile',views.profile,name="profile"),
-    path('service-details',views.service_details,name="service-detail")
-
+    path("", views.home),
+    path("login", views.loginView, name="login"),
+    path("logout", views.logoutView, name="logout"),
+    path("register", views.register, name="register"),  # type: ignore
+    path("accounttype", views.select_user_type, name="user_selection_type"),
+    path("trainer_signup", views.trainer_signup, name="trainer_signup"),
+    path("trainee_signup", views.trainee_signup, name="trainee_signup"),
+    path("profile", views.profile, name="profile"),  # type: ignore
+    path("service-details", views.service_details, name="service-detail"),
+    path("service-details-2", views.service_details2, name="service-detail-2"),
+    path("service-details-3", views.service_details3, name="service-detail-3"),
+    path("service-details-4", views.service_details4, name="service-detail-4"),
+    path("service-details-5", views.service_details5, name="service-detail-5"),
+    path("service-details-6", views.service_details6, name="service-detail-6"),
 ]

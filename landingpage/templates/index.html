@@ -8,23 +8,7 @@
 
 <title>Resox - HTML 5 Template Preview</title>
 
-<!-- Fav Icon -->
-<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-<!-- Stylesheets -->
-<link href="{% static 'css/font-awesome-all.css' %}" rel="stylesheet">
-<link href="{% static 'css/flaticon.css' %}" rel="stylesheet">
-<link href="{% static 'css/owl.css' %}" rel="stylesheet">
-<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-<link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet">
-<link href="{% static 'css/animate.css' %}" rel="stylesheet">
-<link href="{% static 'css/color.css' %}" rel="stylesheet">
-<link href="{% static 'css/global.css' %}" rel="stylesheet">
-<link href="{% static 'css/style.css' %}" rel="stylesheet">
-<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+{% include 'stylesheet.html' %}
 
 </head>
 
@@ -34,195 +18,8 @@
 
     <div class="boxed_wrapper">
 
-
-        <!-- preloader -->
-        <div class="loader-wrap">
-            <div class="preloader">
-                <div class="preloader-close">Preloader Close</div>
-                <div id="handle-preloader" class="handle-preloader">
-                    <div class="animation-preloader">
-                        <div class="spinner"></div>
-                        <div class="txt-loading">
-                            <span data-text-preloader="R" class="letters-loading">
-                                R
-                            </span>
-                            <span data-text-preloader="e" class="letters-loading">
-                                e
-                            </span>
-                            <span data-text-preloader="s" class="letters-loading">
-                                s
-                            </span>
-                            <span data-text-preloader="o" class="letters-loading">
-                                o
-                            </span>
-                            <span data-text-preloader="x" class="letters-loading">
-                                x
-                            </span>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </div>
-        <!-- preloader end -->
-
-
-        <!-- main header -->
-        <header class="main-header style-one">
-            <!-- header-top -->
-            <div class="header-top">
-                <div class="auto-container">
-                    <div class="top-inner clearfix">
-                        <div class="text pull-left">
-                            <p>Welcome to the professional physiotherapy clinic</p>
-                        </div>
-                        <ul class="info pull-right">
-                            <li><i class="flaticon-pin"></i>88 broklyn silver street, USA</li>
-                            <li><i class="flaticon-alarm-clock"></i>Mon to Fri 9:00am to 6:00pm</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- header-upper -->
-            <div class="header-upper">
-                <div class="auto-container">
-                    <div class="upper-inner clearfix">
-                        <div class="logo-box pull-left">
-
-                            <figure class="logo">
-                                <div>The Sports Doctor</div>
-                                <a href=""><img src="{% static 'images/logo.png' %}" alt=""></a>
-                            </figure>
-                        </div>
-                        <ul class="upper-info pull-right clearfix">
-                            <li>
-                                <i class="flaticon-telephone"></i>
-                                <p>Call us anytime</p>
-                                <h5><a href="tel:886660009999">88 666 000 9999</a></h5>
-                            </li>
-                            <li>
-                                <i class="flaticon-email"></i>
-                                <p>Write a mail</p>
-                                <h5><a href="mailto:needhelp@info.com">needhelp@info.com</a></h5>
-                            </li>
-                            <li class="btn-box">
-                                <a href="contact.html" class="theme-btn-one">Book Appointment</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- header-lower -->
-            <div class="header-lower">
-                <div class="auto-container">
-                    <div class="outer-box">
-                        <div class="menu-area clearfix">
-                            <!--Mobile Navigation Toggler-->
-                            <div class="mobile-nav-toggler">
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                            </div>
-                            <nav class="main-menu navbar-expand-md navbar-light pull-left">
-                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                    <ul class="navigation clearfix">
-                                        <li class=""><a href="">Home</a>
-                                        </li> 
-                                        <li class=""><a href="">Pages</a>
-                                        </li>
-                                        <li class=""><a href="">Services</a>
-                                            {% comment %} <ul>
-                                                <li><a href="service.html">Our Services</a></li>
-                                                <li><a href="{% url 'service-detail' %}">Physiotherapy</a></li>
-                                                <li><a href="service-details-2.html">Massage Therapy</a></li>
-                                                <li><a href="service-details-3.html">Sport Injuries</a></li>
-                                                <li><a href="service-details-4.html">Chiroptratic Therapy</a></li>
-                                                <li><a href="service-details-5.html">Clinical Pilates</a></li>
-                                                <li><a href="service-details-6.html">Work Injusries</a></li>
-                                            </ul> {% endcomment %}
-                                        </li>
-                                        <li class=""><a href="" >Blog</a>
-                                        </li>  
-                                        {% if request.user.is_authenticated %}
-
-                                        <li class="nav_item">
-                                          <a href="{% url 'profile' %}" >My Profile</a>
-                                        </li>
-                              
-                                        <li class="nav_item">
-                                          <a href="" >Hello, {{request.user.username}}</a>
-                                        </li>
-                              
-                                        <li class="nav-item">
-                                          <a href="{% url 'logout' %}" >Logout</a>
-                                        </li>
-                                        {% else %}
-                                        <li class="nav-item">
-                                          <a href="{% url 'login' %}" >Login</a>
-                                        </li>
-                                        {% endif %}
-                                                                  </ul>
-                                </div>
-                            </nav>
-                            <ul class="social-links pull-right clearfix">
-                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--sticky Header-->
-            <div class="sticky-header">
-                <div class="auto-container">
-                    <div class="outer-box">
-                        <div class="menu-area clearfix">
-                            <nav class="main-menu pull-left">
-                                <!--Keep This Empty / Menu will come through Javascript-->
-                            </nav>
-                            <ul class="social-links pull-right clearfix">
-                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- main-header end -->
-
-        <!-- Mobile Menu  -->
-        <div class="mobile-menu">
-            <div class="menu-backdrop"></div>
-            <div class="close-btn"><i class="fas fa-times"></i></div>
-            
-            <nav class="menu-box">
-                <div class="nav-logo"><a href=""><img src="{% static 'images/logo-2.png' %}" alt="" title=""></a></div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-                <div class="contact-info">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li>Chicago 12, Melborne City, USA</li>
-                        <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                        <li><a href="mailto:info@example.com">info@example.com</a></li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <ul class="clearfix">
-                        <li><a href=""><span class="fab fa-twitter"></span></a></li>
-                        <li><a href=""><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href=""><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href=""><span class="fab fa-instagram"></span></a></li>
-                        <li><a href=""><span class="fab fa-youtube"></span></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div><!-- End Mobile Menu -->
-
+        {% include 'preloader.html' %}
+        {% include 'navbar.html' %}
 
         <!-- banner-section -->
         <section class="banner-section centred">
@@ -278,7 +75,7 @@
                         </div>
                         <div class="inner">
                             <h4>Experienced Therapists</h4>
-                            <p>Lorem ipsum is fre dolor sit amet cectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                            <p>We have the best Therapists.</p>
                         </div>
                     </div>
                 </div>
@@ -289,7 +86,7 @@
                         </div>
                         <div class="inner">
                             <h4>24/7 Emergency Services</h4>
-                            <p>Lorem ipsum is fre dolor sit amet cectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                            <p>Our goal to serve you everytime anytime</p>
                         </div>
                     </div>
                 </div>
@@ -300,7 +97,7 @@
                         </div>
                         <div class="inner">
                             <h4>Get Free Consultation</h4>
-                            <p>Lorem ipsum is fre dolor sit amet cectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                            <p>Happy to help anytime</p>
                         </div>
                     </div>
                 </div>
@@ -318,9 +115,9 @@
                             <div class="content-box">
                                 <div class="sec-title">
                                     <p>Clinic Introduction</p>
-                                    <h2>Welcome to Physiotherapy & Chiroparctor Clinic</h2>
+                                    <h2>Welcome to The Sports Doctor Clinic</h2>
                                 </div>
-                                <h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum lorem ipsum is simply free.</h3>
+                                <h3>We are the best.</h3>
                                 <ul class="list-item clearfix"> 
                                     <li>Refresing to get such a personal touch.</li>
                                     <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
@@ -369,39 +166,39 @@
                     <div class="service-block-one">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><a href="service-details-2.html"><img src="{% static 'images/service/service-2.jpg' %}" alt=""></a></figure>
+                                <figure class="image"><a href="{% url 'service-detail-2' %}"><img src="{% static 'images/service/service-2.jpg' %}" alt=""></a></figure>
                                 <div class="icon-box"><i class="flaticon-massage"></i></div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="service-details-2.html">Massage Therapy</a></h4>
+                                <h4><a href="{% url 'service-detail-2' %}">Massage Therapy</a></h4>
                                 <p>Lorem is free text no used by other agencies...</p>
-                                <div class="link"><a href="service-details-2.html"><i class="fas fa-chevron-circle-right"></i>Read More</a></div>
+                                <div class="link"><a href="{% url 'service-detail-2' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="service-block-one">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><a href="service-details-3.html"><img src="{% static 'images/service/service-3.jpg' %}" alt=""></a></figure>
+                                <figure class="image"><a href="{% url 'service-detail-3' %}"><img src="{% static 'images/service/service-3.jpg' %}" alt=""></a></figure>
                                 <div class="icon-box"><i class="flaticon-broken-bone"></i></div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="service-details-3.html">Sport Injuries</a></h4>
+                                <h4><a href="{% url 'service-detail-3' %}">Sport Injuries</a></h4>
                                 <p>Lorem is free text no used by other agencies...</p>
-                                <div class="link"><a href="service-details-3.html"><i class="fas fa-chevron-circle-right"></i>Read More</a></div>
+                                <div class="link"><a href="{% url 'service-detail-3' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="service-block-one">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><a href="service-details-4.html"><img src="{% static 'images/service/service-4.jpg' %}" alt=""></a></figure>
+                                <figure class="image"><a href="{% url 'service-detail-4' %}"><img src="{% static 'images/service/service-4.jpg' %}" alt=""></a></figure>
                                 <div class="icon-box"><i class="flaticon-chiropractic"></i></div>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="service-details-4.html">Chiropratic Therapy</a></h4>
+                                <h4><a href="{% url 'service-detail-4' %}">Chiropratic Therapy</a></h4>
                                 <p>Lorem is free text no used by other agencies...</p>
-                                <div class="link"><a href="service-details-4.html"><i class="fas fa-chevron-circle-right"></i>Read More</a></div>
+                                <div class="link"><a href="{% url 'service-detail-4' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a></div>
                             </div>
                         </div>
                     </div>
@@ -753,133 +550,17 @@
         <!-- cta-section end -->
 
 
-        <!-- main-footer -->
-        <footer class="main-footer">
-            <div class="footer-top" style="background-image: url({% static 'images/background/footer-1.jpg' %});">
-                <figure class="icon-layer"><img src="{% static 'images/icons/icon-1.png' %}" alt=""></figure>
-                <div class="auto-container">
-                    <div class="widget-section">
-                        <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                                <div class="footer-widget logo-widget">
-                                    <figure class="logo-box"><a href=""><img src="{% static 'images/footer-logo.png' %}" alt=""></a></figure>
-                                    <div class="text">
-                                        <p>There are many variatio of lorem ipsum available.</p>
-                                    </div>
-                                    <ul class="info clearfix">
-                                        <li><i class="flaticon-email"></i><a href="mailto:needhelp@info.com">needhelp@info.com</a></li>
-                                        <li><i class="flaticon-pin"></i>88 broklyn silver street, USA</li>
-                                    </ul>
-                                    <div class="support-box">
-                                        <i class="flaticon-telephone"></i>
-                                        <p>Call us anytime</p>
-                                        <h5><a href="tel:6660009999">666 000 9999</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                                <div class="footer-widget links-widget ml-70">
-                                    <div class="widget-title">
-                                        <h4>Links</h4>
-                                    </div>
-                                    <div class="widget-content">
-                                        <ul class="links-list clearfix">
-                                            <li><a href="">About</a></li>
-                                            <li><a href="">Make Appointment</a></li>
-                                            <li><a href="">Our Services</a></li>
-                                            <li><a href="">Team Members</a></li>
-                                            <li><a href="">Team Members</a></li>
-                                            <li><a href="">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                                <div class="footer-widget links-widget">
-                                    <div class="widget-title">
-                                        <h4>Services</h4>
-                                    </div>
-                                    <div class="widget-content">
-                                        <ul class="links-list clearfix">
-                                            <li><a href="">Massage Therapy</a></li>
-                                            <li><a href="">Physiotherapy</a></li>
-                                            <li><a href="">Chiroptratic Therapy</a></li>
-                                            <li><a href="">Sport Injuries</a></li>
-                                            <li><a href="">Clinical Pilates</a></li>
-                                            <li><a href="">Work Injuries</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                                <div class="footer-widget appointment-widget centred">
-                                    <div class="icon-layer"><i class="flaticon-alarm-clock-1"></i></div>
-                                    <div class="widget-title">
-                                        <h4>Timings</h4>
-                                    </div>
-                                    <div class="widget-content">
-                                        <ul class="shediul-list clearfix">
-                                            <li>
-                                                <span>Mon</span>
-                                                <h6>9:00am - 6:00pm</h6>
-                                            </li>
-                                            <li>
-                                                <span>Fri to Sat</span>
-                                                <h6>10:00am - 4:00pm</h6>
-                                            </li>
-                                            <li>
-                                                <span>Sun</span>
-                                                <h6>Work off</h6>
-                                            </li>
-                                            <li>
-                                                <a href="" class="theme-btn-one">Book Appointment</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-botton">
-                <div class="auto-container clearfix">
-                    <div class="copyright pull-left">
-                        <p>&copy; Copyright 2020 by <a href="">Resox</a></p>
-                    </div>
-                    <ul class="social-links pull-right clearfix">
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <!-- main-footer end -->
-
-
+        <!-- footer section -->
+        {% include 'footer.html' %}
+        <!-- end footer -->
+        
         <!--scroll to top-->
         <button class="scroll-top scroll-to-target" data-target="html">
             <span class="far fa-arrow-up"></span>
         </button>
     </div>
 
-
-    <!-- jequery plugins -->
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/owl.js' %}"></script>
-    <script src="{% static 'js/wow.js' %}"></script>
-    <script src="{% static 'js/validation.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox.js' %}"></script>
-    <script src="{% static 'js/appear.js' %}"></script>
-    <script src="{% static 'js/scrollbar.js' %}"></script>
-    <script src="{% static 'js/nav-tool.js' %}"></script>
-
-    <!-- main-js -->
-    <script src="{% static 'js/script.js' %}"></script>
+    {% include 'jsplugins.html' %}
 
 </body><!-- End of .page_wrapper -->
 </html>
