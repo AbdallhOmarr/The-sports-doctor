@@ -33,3 +33,15 @@ function clearMsg() {
 }
 
 
+
+// function to shwo injury text area
+function showInjuryDetails() {
+  var selectElement = document.getElementById("injury-yes-no");
+  var injuryDetailsDiv = document.getElementById("injury-details");
+
+  if (selectElement.value == "yes") {
+    injuryDetailsDiv.style.display = "block";
+  } else {
+    injuryDetailsDiv.style.display = "none";
+  }
+}

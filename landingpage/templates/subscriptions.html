@@ -1,23 +1,52 @@
-<div class="row my-3">
-    <div class="col">
-        <h3>Subscription Plans</h3>
-        <p>Choose one of our subscription plans below:</p>
-    </div>
-</div>
 <form action="{% url 'register' %}" method="post">
     {% csrf_token %}
-
-    <div class="row justify-content-center my-3">
-        <div class="col-4 d-flex justify-content-center">
-            <div class="form-group w-100">
-                <select name="subscriptions-plan" id="subscriptions-plan" class='form-control text-center '>
+    <!-- justify-content-center -->
+    <div class="row my-3">
+        <div class="col-sm-4">
+            <label for="subscriptions-plan">Choose one of the below plans</label>
+        </div>
+        <div class="col-sm-8">
+            <div class="form-group">
+                <select name="subscriptions-plan" id="subscriptions-plan" class="form-control">
                     <option value="" selected>Choose Plan</option>
                     <option value="plan1">Basic Physiotherapy Treatment</option>
                     <option value="plan2">Elderly Care Program</option>
                     <option value="plan3">Sports Injury Treatment</option>
                 </select>
             </div>
+        </div>
+    </div>
 
+    <div class="row my-3">
+        <div class="col-sm-4">
+            <label for="appointment-date">Choose a date for your appointment</label>
+        </div>
+        <div class="col-sm-8">
+            <div class="form-group">
+                <input type="date" name="appointment-date" id="appointment-date" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-3">
+        <div class="col-sm-4">
+            <label for="appointment-time">Choose a time for your appointment</label>
+        </div>
+        <div class="col-sm-8">
+            <div class="form-group">
+                <select name="appointment-time" id="appointment-time" class="form-control">
+                    <option value="" selected>Choose Time</option>
+                    <option value="9am">9:00 AM</option>
+                    <option value="10am">10:00 AM</option>
+                    <option value="11am">11:00 AM</option>
+                    <option value="12pm">12:00 PM</option>
+                    <option value="1pm">1:00 PM</option>
+                    <option value="2pm">2:00 PM</option>
+                    <option value="3pm">3:00 PM</option>
+                    <option value="4pm">4:00 PM</option>
+                    <option value="5pm">5:00 PM</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -51,6 +80,7 @@
             </div>
         </div>
     </div>
+
 </form>
 <hr>
 <div class="table-responsive">
