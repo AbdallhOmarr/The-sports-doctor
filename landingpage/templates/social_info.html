@@ -1,0 +1,331 @@
+<div>
+    <form>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="nickname">Nickname:</label>
+                    <input type="text" class="form-control" id="nickname" name="nickname">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="job">Current job:</label>
+                    <input type="text" class="form-control" id="job" name="job">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="workplace">Workplace:</label>
+                    <input type="text" class="form-control" id="workplace" name="workplace">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group text-left">
+            <label for="job-responsibilities">Job responsibilities:</label>
+            <textarea class="form-control" id="job-responsibilities" name="job-responsibilities" rows="3"></textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="alcohol">Do you drink alcohol?</label>
+                        <select id="alchols_selections" onchange="showAlcoholsOptions()">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-5 mb-3" id="alchols_options" style="display:none;">
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="daily-checkbox" class="mr-2">Daily</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="daily-checkbox">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="weekly-checkbox" class="mr-2">Weekly</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="weekly-checkbox">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="monthly-checkbox" class="mr-2">Monthly</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="monthly-checkbox">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="smoking">Do you smoke?</label>
+                        <select id="smoke_selections" onchange="showSmokeOptions()">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-5 mb-3" id="smoke_options" style="display:none;">
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="daily-checkbox" class="mr-2">Daily</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="daily-checkbox">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="weekly-checkbox" class="mr-2">Weekly</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="weekly-checkbox">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="monthly-checkbox" class="mr-2">Monthly</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="monthly-checkbox">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="drugs">Do you take any drugs?</label>
+                        <select id="drug_selections" onchange="showDrugOptions()">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-5 mb-3" id="drug_options" style="display:none;">
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="daily-checkbox" class="mr-2">Daily</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="daily-checkbox">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="weekly-checkbox" class="mr-2">Weekly</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="weekly-checkbox">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <div class="form-check form-check-inline text-left">
+                        <label for="monthly-checkbox" class="mr-2">Monthly</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="monthly-checkbox">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="marital-status">Marital status:</label>
+
+                        <select id="marital-status" name="marital-status">
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="widowed">Widowed</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="children">Number of children:</label>
+                        <input type="number" class="form-control" id="children" name="children">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-6 ">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="long-sitting">Does your work require long sitting?</label>
+                        <select id="long-sitting" onchange="longSittingHours()" name="long-sitting">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6 mb-5" id="sittingTime" style="display:none;">
+                <input type="number" placeholder="Number of Hours" class="form-control" id="setting_time"
+                    name="setting_time">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="repetitive-movements">Do you repeat certain movements during your work?</label>
+                        <select id="repetitive-movements" name="repetitive-movements" onchange="showMovementsDetails()">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-6 mb-5" id="movementsWork" style="display:none;">
+                <input type="text" placeholder="Explain please" class="form-control" id="movementsatwork"
+                    name="movementsatwork">
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-6 ">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="computer-use-label">Do you use computer or desk more than 8 hours per day?</label>
+                        <select id="computer-use-selection" name="computer-use">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="wear-label">Does your job require wearing certain types of shoes, such as
+                            high heels or heavy shoes?
+                        </label>
+                        <select id="wear-selection" name="wear">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="work-pressure-label">Does your work require anxiety or psychological and nervous
+                            pressure?
+
+
+                        </label>
+                        <select id="work-pressure-selection" name="work-pressure">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col">
+                <button type="submit" class="btn btn-secondary w-100">Update</button>
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
+
+
+<script>
+
+    function showAlcoholsOptions() {
+        var selectElement = document.getElementById("alchols_selections");
+        var alchols_options = document.getElementById("alchols_options");
+        console.log(alchols_options)
+        if (selectElement.value == "yes") {
+            alchols_options.style.display = "inline-flex";
+        } else {
+            alchols_options.style.display = "none";
+
+        }
+
+    }
+    function showSmokeOptions() {
+        var selectElement = document.getElementById("smoke_selections");
+        var smoke_options = document.getElementById("smoke_options");
+        if (selectElement.value == "yes") {
+            smoke_options.style.display = "inline-flex";
+        } else {
+            smoke_options.style.display = "none";
+
+        }
+
+    }
+
+    function showDrugOptions() {
+        var selectElement = document.getElementById("drug_selections");
+        var drug_options = document.getElementById("drug_options");
+        if (selectElement.value == "yes") {
+            drug_options.style.display = "inline-flex";
+        } else {
+            drug_options.style.display = "none";
+
+        }
+
+    }
+    function longSittingHours() {
+        var selectElement = document.getElementById("long-sitting");
+        var drug_options = document.getElementById("sittingTime");
+        if (selectElement.value == "yes") {
+            drug_options.style.display = "inline-flex";
+        } else {
+            drug_options.style.display = "none";
+
+        }
+
+    }
+    function showMovementsDetails() {
+        var selectElement = document.getElementById("repetitive-movements");
+        var drug_options = document.getElementById("movementsWork");
+        if (selectElement.value == "yes") {
+            drug_options.style.display = "inline-flex";
+        } else {
+            drug_options.style.display = "none";
+
+        }
+
+    }
+
+
+</script>
