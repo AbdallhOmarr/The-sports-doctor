@@ -21,17 +21,71 @@
                 <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
             </div>
         </div>
-        <div class="row my-3">
-            <div class="col-6 ">
+        <div class="row my-3 align-items-center">
+            <div class="col-3">
                 <div class="text-left">Email</div>
                 <input type="text" name="email" id="email" class="form-control" placeholder="Your email">
             </div>
-            <div class="col-6 ">
+            <div class="col-3">
                 <div class="text-left">Mobile</div>
                 <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Your mobile">
             </div>
+            <div class="col-3 d-flex">
+                <div class="div-centered" style="padding-top: 40px;">
+                    <label for="">Has Whatsapp</label>
+                    <select name="whatsapp" id="whatsapp" class="">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="text-left">Alternative Mobile</div>
+                <input type="text" name="altmobile" id="altmobile" class="form-control" placeholder="Your other Mobile">
+            </div>
 
         </div>
+
+        <div class="row">
+            <div class="col text-left">
+                Emergency contacts
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="text-left">His/Her Name</div>
+                <input type="text" name="relativename1" id="relativename1" class="form-control"
+                    placeholder="Relative Name">
+            </div>
+            <div class="col-4">
+                <div class="text-left">Relationship</div>
+                <input type="text" name="Relationship1" id="Relationship1" class="form-control"
+                    placeholder="His/Her Relationship to you">
+            </div>
+            <div class="col-4">
+                <div class="text-left">His/Her Mobile</div>
+                <input type="text" name="relmobile1" id="relmobile1" class="form-control" placeholder="">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="text-left">His/Her Name</div>
+                <input type="text" name="relativename2" id="relativename2" class="form-control"
+                    placeholder="Relative Name">
+            </div>
+            <div class="col-4">
+                <div class="text-left">Relationship</div>
+                <input type="text" name="Relationship2" id="Relationship2" class="form-control"
+                    placeholder="His/Her Relationship to you">
+            </div>
+            <div class="col-4">
+                <div class="text-left">His/Her Mobile</div>
+                <input type="text" name="relmobile2" id="relmobile2" class="form-control" placeholder="">
+            </div>
+
+        </div>
+
         <div class="row my-3">
             <div class="col-6 ">
                 <div class="text-left">Date of birth</div>
@@ -56,6 +110,256 @@
             </div>
 
         </div>
+
+        <hr>
+        <div class="row">
+            <div class="col text-left">
+                Demographic info
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="text-left">Nationality</div>
+                    <input type="text" name="nationality" id="nationality" class='form-control'
+                        placeholder="Your nationality">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="text-left">Resident Country
+                    </div>
+                    <input type="text" name="resident-country" id="resident-country" class='form-control'
+                        placeholder="Your resident country">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="text-left">City
+                    </div>
+                    <input type="text" name="city" id="city" class='form-control' placeholder="Your city">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">Address</div>
+                    <!-- <input type="text" name="address" id="address" class='form-control' placeholder="Your Address"> -->
+                    <textarea name="address" id="address" rows="3" class="form-control"
+                        placeholder="Your Address"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="text-left">Gender
+                    </div>
+                    <select name="gender" class="form-control" id="gender">
+                        <option value="Male">Male </option>
+                        <option value="Female">Female </option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="text-left">Weight
+                    </div>
+                    <input type="text" name="weight" id="weight" class='form-control' placeholder="Your weight in Kg">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="text-left">Height
+                    </div>
+                    <input type="text" name="height" id="height" class='form-control' placeholder="Your height in cm">
+                </div>
+            </div>
+
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col text-left">
+                Sports related data
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="text-left">Name of the Sport</div>
+                    <input type="text" name="sportName" id="sportName" class='form-control'
+                        placeholder="What sport do you play?">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="text-left">Current Club</div>
+                    <input type="text" name="currentClub" id="currentClub" class='form-control'
+                        placeholder="What is the name of the club you play for?">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="text-left">Play Position</div>
+                    <input type="text" name="playPosition" id="playPosition" class='form-control'
+                        placeholder="What position do you play?">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="text-left">Years of playing</div>
+                    <input type="text" name="playYears" id="playYears" class='form-control'
+                        placeholder="How many years have you been playing?">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">Most Achieved Sports-Related Goal</div>
+                    <textarea name="address" id="address" rows="3" class="form-control"
+                        placeholder="Tell us about the most sports-related goal you have achieved"></textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="reach">How did you reached Us?</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col mb-3 d-flex flex-row" id="reach">
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="friend" class="mr-2">Friend</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="friend-checkbox">
+                    </div>
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="Instagram-checkbox" class="mr-2">Instagram</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="Instagram-checkbox">
+                    </div>
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="facebook-checkbox" class="mr-2">Facebook</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="facebook-checkbox">
+                    </div>
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="club-checkbox" class="mr-2">Club</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="club-checkbox">
+                    </div>
+
+                    <div class="form-check form-check-inline text-left mr-3">
+                        <label for="transfer-checkbox" class="mr-2">Direct transfer</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="transfer-checkbox">
+                        <input type="text" name="transferText" class="form-control w-50">
+                    </div>
+                    <div class="form-check form-check-inline text-left">
+                        <label for="other-checkbox" class="mr-2">Other</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="other-checkbox">
+                        <input type="text " name="otherReachReason" class="form-control w-50">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="reach"> Which body parts do you want to evaluate? </label>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <div class="text-left">Body Part</div>
+                    <input type="text" name="bodyPart" id="bodyPart" class='form-control'
+                        placeholder="Name the Body Part">
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">Reasons of discomfort</div>
+                    <input type="text" name="complain" id="complain" class='form-control'
+                        placeholder="Please explain why you feel discomfort or what the reasons for your complaint are">
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <input type="text" name="bodyPart2" id="bodyPart2" class='form-control'
+                        placeholder="Name the Body Part">
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" name="complain2" id="complain2" class='form-control'
+                        placeholder="Please explain why you feel discomfort or what the reasons for your complaint are">
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <input type="text" name="bodyPart3" id="bodyPart3" class='form-control'
+                        placeholder="Name the Body Part">
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" name="complain3" id="complain3" class='form-control'
+                        placeholder="Please explain why you feel discomfort or what the reasons for your complaint are">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+
+
         <div class="row my-3">
             <div class="col">
 
@@ -65,7 +369,12 @@
             </div>
 
         </div>
+
     </form>
+
+
+
+
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -73,4 +382,6 @@
             {% endfor %}
     </ul>
     {% endif %}
+
+
 </div>
