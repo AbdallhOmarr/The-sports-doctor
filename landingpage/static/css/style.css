@@ -88,7 +88,7 @@
 
 .fixed-header .sticky-header{
   z-index:999;
-  opacity:1;
+  opacity:75%;
   visibility:visible;
   -ms-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
@@ -163,9 +163,9 @@
 .main-header .logo-box .logo{
   position: relative;
   display: block;
-  max-width: 149px;
+  max-width: 300px;
   width: 100%;
-  padding: 35px 0px 39px 0px;
+  padding: 35px 0px 0px 0px;
 }
 
 .main-header .header-upper .logo-box .logo img{
@@ -251,7 +251,7 @@
 
 .main-header.style-one .social-links{
   position: relative;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .main-header.style-one .social-links li{
