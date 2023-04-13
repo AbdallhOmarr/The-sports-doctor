@@ -179,4 +179,3 @@ class TraineeSignupForm(UserCreationForm):
             trainee.save()
 
         return user
-

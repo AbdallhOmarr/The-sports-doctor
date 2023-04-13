@@ -142,9 +142,7 @@ def profile(request):
     context = {}
     # pass user info form
     username = request.user
-    print(username)
     user = models.User.objects.filter(username=username)
-    print(user[0])
     if request.user.groups.filter(name="Trainer").exists():
         # Do something if the user is a Trainer
         return render(request, "trainer_profile.html", context)
@@ -156,6 +154,7 @@ def profile(request):
         # Do something else if the user is not a Trainer or Trainee
         return render(request, "admin_profile.html", context)
     print("here's my profile")
+    print(request.user.groups.filter(name="admin"))
 
 
 @receiver(post_save, sender=models.Trainer)
