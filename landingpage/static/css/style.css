@@ -5400,3 +5400,8 @@ div#mCSB_1_container{
 button{
   background: transparent;
 }
+
+
+hr{
+  margin:0!important;
+}
