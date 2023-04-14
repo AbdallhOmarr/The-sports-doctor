@@ -1,111 +1,114 @@
 {% load static %}
-
 <!-- main header -->
 <header id="navbarapp" class="main-header style-one">
     <!-- header-top -->
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="top-inner clearfix">
-                    <div class="text pull-left">
-                        <p>Welcome to the Sports doctor</p>
-                    </div>
-                    <ul class="info pull-right">
-                    </ul>
-                    <ul v-for="link in social_links" class="social-links pull-right clearfix">
-                        <li style="padding-inline:5px"> <a :href="link.url"><i :class="link.class"></i></a></li>
-                    </ul>
-
+    <div class="header-top">
+        <div class="auto-container">
+            <div class="top-inner clearfix">
+                <div class="text pull-left">
+                    <p>Welcome to the Sports doctor</p>
                 </div>
+                <ul class="info pull-right">
+                </ul>
+                <ul v-for="link in social_links" class="social-links pull-right clearfix">
+                    <li style="padding-inline:5px">
+                        <a :href="link.url"><i :class="link.class"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </div>
     <!-- end header-top -->
-
     <!-- header-upper -->
-        <div class="header-upper">
-            <div class="auto-container">
-                <div class="upper-inner clearfix">
-                    <div class="logo-box pull-left">
-                        <figure class="logo">
-                            <a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a>
-                        </figure>
-                    </div>
-                    <ul class="upper-info pull-right clearfix">
-                        <li>
-                            <i class="flaticon-telephone"></i>
-                            <p>Call us anytime</p>
-                            <h5><a href="tel:886660009999">01000000000</a></h5>
-                        </li>
-                        <li>
-                            <i class="flaticon-email"></i>
-                            <p>Write a mail</p>
-                            <h5><a href="mailto:the_sports_doctor@gmail.com">the_sports_doctor@gmail.com</a></h5>
-                        </li>
-                        <li  class="btn-box">
-                            <a href="contact.html" class="theme-btn-one">Book Appointment</a>
-                        </li>
-                    </ul>
+    <div class="header-upper">
+        <div class="auto-container">
+            <div class="upper-inner clearfix">
+                <div class="logo-box pull-left">
+                    <figure class="logo">
+                        <a href="/">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                        </a>
+                    </figure>
                 </div>
+                <ul class="upper-info pull-right clearfix">
+                    <li>
+                        <i class="flaticon-telephone"></i>
+                        <p>Call us anytime</p>
+                        <h5>
+                            <a href="tel:01100658583">01100658583</a>
+                        </h5>
+                    </li>
+                    <li>
+                        <i class="flaticon-email"></i>
+                        <p>Write a mail</p>
+                        <h5>
+                            <a href="mailto:hossamzidan1995@gmail.com">hossamzidan1995@gmail.com</a>
+                        </h5>
+                    </li>
+                    <li class="btn-box">
+                        <a href="contact.html" class="theme-btn-one">Book Appointment</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </div>
     <!-- end header-upper -->
-<div class="container">
-    <hr>
-
-</div>
+    <div class="container">
+        <hr>
+    </div>
     <!-- header-lower -->
-        <div class="header-lower">
-            <div class="auto-container">
-                <div class="outer-box">
-                    <div class="">
-                        <!--Mobile Navigation Toggler-->
-                        <div class="mobile-nav-toggler">
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                        </div>
-                        <!-- end Mobile Navigation Toggler-->
-                        <div class ="navbar" id="navbarSupportedContent">
-                            <ul class="nav justify-content-start navigation ">
-                                <li class="nav-item">
-                                    <a class="nav-link text-color1" href="#" aria-current="page">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-color1 dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-color1" href="#">Education Materials</a>
-                                        <a class="dropdown-item text-color1" href="#">Fellowship</a>
-                                        <a class="dropdown-item text-color1" href="#">Something else here</a>
-                                    </div>
-                                  
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-color1" href="#">Services</a>
-                                </li>
-
-                            </ul>
-                            <ul class="nav justify-content-right navigation ">
-                                {% if request.user.is_authenticated %}
+    <div class="header-lower">
+        <div class="auto-container">
+            <div class="outer-box">
+                <div class="">
+                    <!--Mobile Navigation Toggler-->
+                    <div class="mobile-nav-toggler">
+                        <i class="icon-bar"></i>
+                        <i class="icon-bar"></i>
+                        <i class="icon-bar"></i>
+                    </div>
+                    <!-- end Mobile Navigation Toggler-->
+                    <div class ="navbar" id="navbarSupportedContent">
+                        <ul class="nav justify-content-start navigation ">
+                            <li class="nav-item">
+                                <a class="nav-link text-color1" href="#" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-color1 dropdown-toggle"
+                                   data-toggle="dropdown"
+                                   href="#"
+                                   role="button"
+                                   aria-haspopup="true"
+                                   aria-expanded="false">Pages</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item text-color1" href="#">Education Materials</a>
+                                    <a class="dropdown-item text-color1" href="#">Fellowship</a>
+                                    <a class="dropdown-item text-color1" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-color1" href="#">Services</a>
+                            </li>
+                        </ul>
+                        <ul class="nav justify-content-right navigation ">
+                            {% if request.user.is_authenticated %}
                                 <li class="nav_item">
                                     <a class="nav-link text-color1"  href="{% url 'profile' %}">My Profile</a>
                                 </li>
-
                                 <li class="nav_item">
-                                    <a class="nav-link text-color1" href="/">Hello, {{request.user.username}}</a>
+                                    <a class="nav-link text-color1" href="/">Hello, {{ request.user.username }}</a>
                                 </li>
-
                                 <li class="nav-item">
                                     <a class="nav-link text-color1" href="{% url 'logout' %}">Logout</a>
                                 </li>
-                                {% else %}
+                            {% else %}
                                 <li class="nav-item">
-                                    <a  class="nav-link text-color1" href="{% url 'login' %}">Login</a>
+                                    <a class="nav-link text-color1" href="{% url 'login' %}">Login</a>
                                 </li>
-                                {% endif %}
-
-                            </ul>
-                        </div>
-
-                        {% comment %} <nav class="main-menu navbar-expand-md navbar-light d-flex flex-row">
+                            {% endif %}
+                        </ul>
+                    </div>
+                    {% comment %} <nav class="main-menu navbar-expand-md navbar-light d-flex flex-row">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class=""><a href="/">Home</a>
@@ -153,65 +156,94 @@
                                 </ul>                   
                             </div>
 
-                        </nav> {% endcomment %}
-                    </div>
+                    </nav> {% endcomment %}
                 </div>
             </div>
         </div>
+    </div>
     <!-- end header-lower -->
-        <div class="container"><hr></div>
+    <div class="container">
+        <hr>
+    </div>
     <!--sticky Header-->
-        <div class="sticky-header">
-            <div class="auto-container">
-                <div class="outer-box">
-                    <div class="menu-area clearfix">
-                        <nav class="main-menu d-flex flex-row">
-                            <!--Keep This Empty / Menu will come through Javascript-->
-                        </nav>
-                    </div>
+    <div class="sticky-header">
+        <div class="auto-container">
+            <div class="outer-box">
+                <div class="menu-area clearfix">
+                    <nav class="main-menu d-flex flex-row">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
                 </div>
             </div>
         </div>
+    </div>
     <!--end sticky Header-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        const { createApp } = Vue
-      
+        const {
+            createApp
+        } = Vue
+
         createApp({
-          data() {
-            return {
-              message: 'Hello Vue!',
-              social_links: [
-                {"id": 0, "class": ["fab", "fa-twitter"], "url": "/"},
-                {"id": 1, "class": ["fab", "fa-facebook-square"], "url": "/"},
-                {"id": 2, "class": ["fab", "fa-instagram"], "url": "/"},
-                {"id": 3, "class": ["fab", "fa-pinterest-p"], "url": "/"}
-            ]
-                    }
-          }
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    social_links: [{
+                        "id": 0,
+                        "class": ["fab", "fa-twitter"],
+                        "url": "/"
+                    }, {
+                        "id": 1,
+                        "class": ["fab", "fa-facebook-square"],
+                        "url": "/"
+                    }, {
+                        "id": 2,
+                        "class": ["fab", "fa-instagram"],
+                        "url": "/"
+                    }, {
+                        "id": 3,
+                        "class": ["fab", "fa-pinterest-p"],
+                        "url": "/"
+                    }]
+                }
+            }
         }).mount('#navbarapp')
     </script>
-    
 </header>
 <!-- main-header end -->
-
 <!-- Mobile Menu  -->
-    <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-
-        <nav class="menu-box">
-            <div class="nav-logo"><a href="/"><img src="{% static 'images/logo-2.png' %}" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            <div class="contact-info">
-                <h4>Contact Info</h4>
-                <ul>
-                    <li>Chicago 12, Melborne City, USA</li>
-                    <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                    <li><a href="mailto:info@example.com">info@example.com</a></li>
-                </ul>
-            </div>
-            {% comment %} <div class="social-links">
+<div class="mobile-menu">
+    <div class="menu-backdrop">
+    </div>
+    <div class="close-btn">
+        <i class="fas fa-times"></i>
+    </div>
+    <nav class="menu-box">
+        <div class="nav-logo">
+            <a href="/">
+                <img src="{% static 'images/logo-2.png' %}" alt="" title="">
+            </a>
+        </div>
+        <div class="menu-outer">
+            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        </div>
+        <div class="contact-info">
+            <h4>
+                Contact Info
+            </h4>
+            <ul>
+                <li>
+                    Chicago 12, Melborne City, USA
+                </li>
+                <li>
+                    <a href="tel:+8801682648101">+88 01682648101</a>
+                </li>
+                <li>
+                    <a href="mailto:info@example.com">info@example.com</a>
+                </li>
+            </ul>
+        </div>
+        {% comment %} <div class="social-links">
                 <ul class="clearfix">
                     <li><a href="/"><span class="fab fa-twitter"></span></a></li>
                     <li><a href="/"><span class="fab fa-facebook-square"></span></a></li>
@@ -219,11 +251,7 @@
                     <li><a href="/"><span class="fab fa-instagram"></span></a></li>
                     <li><a href="/"><span class="fab fa-youtube"></span></a></li>
                 </ul>
-            </div> {% endcomment %}
-        </nav>
-    </div>
+        </div> {% endcomment %}
+    </nav>
+</div>
 <!-- End Mobile Menu -->
-
-
-
-  
