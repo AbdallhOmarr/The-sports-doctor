@@ -5444,3 +5444,523 @@ hr{
 .education-materials .personal-card{
   padding: 20px;
 }
+
+.trainer-card1 {
+  padding: 50;
+}
+.trainee-card1{
+  padding:50;
+}
+
+
+.showcase {
+  max-width: 200%;
+  max-height: 200%;
+  object-fit: contain;
+}
+
+.cardTitle {
+  font-family: "Aref Ruqaa", serif;
+  font-size: xxx-large;
+}
+.cardTitle2 {
+  font-family: "Aref Ruqaa", serif;
+  /* font-size: xx-large; */
+}
+
+.card-size {
+  width: 90%;
+  height: 600px;
+}
+
+.logo-size {
+  width: auto;
+  height: 400px;
+}
+
+.hideBtn {
+  visibility: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 72px;
+  font-family: "Times New Roman", serif;
+}
+.container {
+  position: relative;
+  text-align: center;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+section {
+  margin-bottom: 100px; /* Add 20 pixels of space between each section */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#ss-form input:focus ~ label,
+#ss-form textarea:focus ~ label,
+#ss-form input:valid ~ label,
+#ss-form textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #858585;
+  top: -2.25rem;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+}
+
+#ss-form .styled-input {
+  width: 33.3333%;
+  margin: 2rem 0 1rem;
+  padding: 0;
+  position: relative;
+}
+
+#ss-form .styled-input-in {
+  position: relative;
+}
+
+#ss-form .styled-input label {
+  color: #999;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  line-height: 1;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#ss-form .styled-input.wide {
+  width: 100%;
+}
+
+#ss-form input,
+#ss-form textarea {
+  padding: 1rem 1rem;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 1rem;
+  background: #fafafa;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#ss-form input ~ .span1,
+#ss-form textarea ~ .span1 {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #858585;
+  position: absolute;
+  left: 50%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+#ss-form input ~ .span2,
+#ss-form textarea ~ .span2 {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #858585;
+  position: absolute;
+  right: 50%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+#ss-form input ~ span {
+  bottom: 0;
+}
+
+#ss-form input:focus,
+#ss-form textarea:focus {
+  outline: 0;
+}
+
+#ss-form input:focus ~ .span1,
+#ss-form textarea:focus ~ .span1,
+#ss-form input:focus ~ .span2,
+#ss-form textarea:focus ~ .span2 {
+  width: 50%;
+}
+
+#ss-form textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+#ss-form .btn {
+  font-family: "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 0;
+  padding: 0 25px;
+  height: 51px;
+  line-height: 51px;
+  color: #333;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  margin: 10px 0 0;
+  background-image: none;
+}
+
+#ss-form .btn-default:hover,
+#ss-form .btn-default:focus {
+  background-color: #858585;
+  border: 1px solid #858585;
+  color: white;
+  outline: 0;
+}
+
+#fade {
+  opacity: 0;
+  display: none;
+}
+
+.thanks_layout {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 99999;
+}
+
+.thanks_message {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 50%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #dedede;
+  text-align: center;
+  color: #333;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -25%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.thanks_message .close a {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  color: #333;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .thanks_message {
+    width: 90% !important;
+    margin-left: -45% !important;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #ss-form .styled-input {
+    width: 100%;
+  }
+}
+.home-text {
+  font-size: 72px;
+  color: rgb(70, 70, 70);
+}
+
+.darken {
+  filter: brightness(50%);
+}
+
+/* AmuCIYzq1Ft9_wz4SXelJ-WS_Q56ZOCzKs1iCx43HZdvjui-3rY5TbN3H6MPZ19r */
+
+#map {
+  height: 500px;
+}
+#map-container {
+  width: 100%;
+  height: 100%;
+}
+
+#map-container iframe {
+  width: 100%;
+  height: 40%;
+}
+h1 {
+  font-family: Times, Times New Roman, serif;
+  color: rgb(143, 143, 143);
+}
+
+h2 {
+  font-family: Times, Times New Roman, serif;
+}
+
+h3 {
+  font-family: Times, Times New Roman, serif;
+}
+
+.abouttext {
+  font-size: 54px;
+}
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.arrow-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 20px 15px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.service-img {
+  height: 400px;
+  width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .abouttext {
+    font-size: 32px;
+  }
+
+  .service-img {
+    height: 120px;
+    width: 100%;
+  }
+  .home-text {
+    font-size: 32px;
+  }
+  .office-text {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 12px;
+    font-family: Times, Times New Roman, serif;
+    color: rgb(143, 143, 143);
+  }
+
+  h2 {
+    font-size: 10px;
+
+    font-family: Times, Times New Roman, serif;
+  }
+
+  h3 {
+    font-size: 8px;
+
+    font-family: Times, Times New Roman, serif;
+  }
+  p {
+    font-size: 8px;
+  }
+}
+.form-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.text-left {
+  text-align: left;
+  margin-left: 3;
+}
+.login-btn {
+  width: 100;
+  height: 30px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* set height to 100% to fill the parent container */
+}
+.hovercard:hover {
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.card.trainer-card.active,
+.card.trainee-card.active {
+  border: 2px solid #333;
+}
+
+.card.trainer-card.active .card-body,
+.card.trainee-card.active .card-body {
+  background-color: #333;
+  color: #fff;
+}
+
+.card-text {
+  margin-top: 0.5rem;
+}
+
+.card.trainer-card .card-body:hover,
+.card.trainee-card .card-body:hover {
+  background-color: #f8f9fa;
+}
+
+.card.trainer-card .card-body:hover .card-title,
+.card.trainee-card .card-body:hover .card-title {
+  color: #333;
+}
+
+
+/* Change the background color of inactive tabs */
+/* .nav-tabs:not(.active) .nav-link {
+  background-color: #f1f1f1;
+} */
+
+/* Change the text color of inactive tabs */
+.nav-tabs:not(.active) .nav-link {
+  color: #333;
+}
+
+/* Change the background color of the active tab */
+.nav-tabs .nav-link.active {
+  background-color: #333;
+}
+
+/* Change the text color of the active tab */
+.nav-tabs .nav-link.active {
+  color: #fff;
+}
+
+
+.body-section{
+  margin: 100px;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.text-left {
+  text-align: left;
+  margin-left: 3;
+}
+.login-btn {
+  width: 100;
+  height: 30px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* set height to 100% to fill the parent container */
+}
+.hovercard:hover {
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.trainer-card.active,
+.trainee-card.active {
+  border: 2px solid #333;
+}
+
+.trainer-card.active .card-body,
+.trainee-card.active .card-body {
+  background-color: #333;
+  color: #fff;
+}
+
+.card-text {
+  margin-top: 0.5rem;
+}
+
+.card.trainer-card .card-body:hover,
+.card.trainee-card .card-body:hover {
+  background-color: #f8f9fa;
+}
+
+.card.trainer-card .card-body:hover .card-title,
+.card.trainee-card .card-body:hover .card-title {
+  color: #333;
+}
+
+
+/* Change the background color of inactive tabs */
+/* .nav-tabs:not(.active) .nav-link {
+  background-color: #f1f1f1;
+} */
+
+/* Change the text color of inactive tabs */
+.nav-tabs:not(.active) .nav-link {
+  color: #333;
+}
+
+/* Change the background color of the active tab */
+.nav-tabs .nav-link.active {
+  background-color: #333;
+}
+
+/* Change the text color of the active tab */
+.nav-tabs .nav-link.active {
+  color: #fff;
+}
+
+
+
+.bi-file-pdf:hover {
+  color: red;
+}

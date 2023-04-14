@@ -1,32 +1,31 @@
-{% extends 'base.html' %} {% block title %}Login{% endblock %} {% block body %}
-<div class="container">
-  <div class="card-group mt-5 h-25">
-    <div class="card trainer-card" data-url="{% url 'trainer_signup' %}">
-      <div class="card-body hovercard">
-        <h4 class="card-title">Trainer</h4>
-        <p class="card-text">Sign up as a trainer</p>
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block body %}
+  <div class="container">
+    <div class="card-group mt-5 h-25">
+      <div class="card trainer-card" data-url="{% url 'trainer_signup' %}">
+        <div class="card-body hovercard">
+          <h4 class="card-title">Trainer</h4>
+          <p class="card-text">Sign up as a trainer</p>
+        </div>
+      </div>
+      <div class="card trainee-card" data-url="{% url 'trainee_signup' %}">
+        <div class="card-body hovercard">
+          <h4 class="card-title">Trainee</h4>
+          <p class="card-text">Sign up as a trainee</p>
+        </div>
       </div>
     </div>
+    <script>
+      const cards = document.querySelectorAll(".card");
 
-    <div class="card trainee-card" data-url="{% url 'trainee_signup' %}">
-      <div class="card-body hovercard">
-        <h4 class="card-title">Trainee</h4>
-        <p class="card-text">Sign up as a trainee</p>
-      </div>
-    </div>
-
-  </div>
-  <script>
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-      card.addEventListener("click", function () {
-        cards.forEach(c => c.classList.remove("active"));
-        this.classList.add("active");
-        const url = this.dataset.url;
-        window.location.href = url;
+      cards.forEach(card => {
+          card.addEventListener("click", function() {
+              cards.forEach(c => c.classList.remove("active"));
+              this.classList.add("active");
+              const url = this.dataset.url;
+              window.location.href = url;
+          });
       });
-    });
-  </script>
-
+    </script>
   {% endblock %}
