@@ -5405,3 +5405,42 @@ button{
 hr{
   margin:0!important;
 }
+
+
+/* start education materials */
+/* 
+.pdf-icon:hover + .pdf-name,
+.pdf-name:hover,{
+  color: #033202;
+} */
+
+.pdf-card:hover{
+  /* color:#033202; */
+  background-color: #033202;
+  /* background: linear-gradient(to bottom, #ffffff, #033202); */
+  transition: background 0.4s ease-in-out;
+
+
+}
+
+.education-materials .pdf-name {
+  font-size: 16;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
+  /* font-family: "Roboto", sans-serif!important; */
+  
+}
+
+.education-materials .page-header{
+  font-size: 26;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
+}
+
+
+.education-materials .card-img-top{
+  height: 100;
+  width: 100;
+}
+
+.education-materials .personal-card{
+  padding: 20px;
+}

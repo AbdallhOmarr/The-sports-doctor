@@ -503,3 +503,9 @@ h3 {
 .nav-tabs .nav-link.active {
   color: #fff;
 }
+
+
+
+.bi-file-pdf:hover {
+  color: red;
+}

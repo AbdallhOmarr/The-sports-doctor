@@ -202,3 +202,9 @@ def service_details5(request):
 def service_details6(request):
     context = {}
     return render(request, "service-details-6.html", context)
+
+
+def educational_materials(request):
+    context = {}
+    return render(request, "education_materials.html", context)
+
