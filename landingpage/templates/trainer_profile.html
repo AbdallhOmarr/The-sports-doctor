@@ -1,49 +1,40 @@
 {% extends 'base.html' %}
-
-
-{% block title %} The sports doctor - Trainer Profile {% endblock %} {% block body %}
-<div class="card">
-  <div class="card-header">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" data-bs-toggle="tab" href="#notifications">Notifications</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link " data-bs-toggle="tab" href="#personal-info">Personal Information</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#assigned-trainee">Assigned Trainees</a>
-      </li>
-    </ul>
-
-  </div>
-  <div class="card-body">
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div class="tab-pane active" id="notifications">
-        <!-- Treatment Plan form fields -->
-        {% include 'notifications.html' %}
-      </div>
-
-      <div class="tab-pane" id="personal-info">
-        <!-- Personal Information form fields -->
-        {% include 'personal_info.html' %}
-      </div>
-      <div class="tab-pane" id="assigned-trainee">
-        <!-- Treatment Plan form fields -->
-        {% include 'assigned_trainee.html' %}
+{% block title %}The sports doctor - Trainer Profile{% endblock %}
+{% block body %}
+  <div class="card">
+    <div class="card-header">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#notifications">Notifications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " data-bs-toggle="tab" href="#personal-info">Personal Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#assigned-trainee">Assigned Trainees</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="notifications">
+          <!-- Treatment Plan form fields -->
+          {% include 'notifications.html' %}
+        </div>
+        <div class="tab-pane" id="personal-info">
+          <!-- Personal Information form fields -->
+          {% include 'trainer_personal_info.html' %}
+        </div>
+        <div class="tab-pane" id="assigned-trainee">
+          <!-- Treatment Plan form fields -->
+          {% include 'assigned_trainee.html' %}
+        </div>
       </div>
     </div>
-
-  </div>
-
-
-  <script>
-    var tabs = new bootstrap.Tab(document.querySelector('#myTabs'))
-    tabs.show()
-  </script>
-
+    <script>
+      var tabs = new bootstrap.Tab(document.querySelector('#myTabs'))
+      tabs.show()
+    </script>
   {% endblock %}
