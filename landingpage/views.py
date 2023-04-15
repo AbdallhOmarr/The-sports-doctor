@@ -208,3 +208,13 @@ def educational_materials(request):
     context = {}
     return render(request, "education_materials.html", context)
 
+
+def fellowships(request):
+    context = {}
+    return render(request, "fellowships.html", context)
+
+
+def services(request):
+    context = {}
+    return render(request, "services.html", context)
+

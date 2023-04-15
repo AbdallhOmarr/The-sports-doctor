@@ -71,7 +71,9 @@
                     <div class ="navbar" id="navbarSupportedContent">
                         <ul class="nav justify-content-start navigation ">
                             <li class="nav-item">
-                                <a class="nav-link text-color1" href="#" aria-current="page">Home</a>
+                                <a class="nav-link text-color1"
+                                   href="{% url 'home' %}"
+                                   aria-current="page">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-color1 dropdown-toggle"
@@ -83,12 +85,12 @@
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item text-color1"
                                        href="{% url 'educational-materials' %}">Education Materials</a>
-                                    <a class="dropdown-item text-color1" href="#">Fellowship</a>
+                                    <a class="dropdown-item text-color1" href="{% url 'fellowships' %}">Fellowship</a>
                                     <a class="dropdown-item text-color1" href="#">Something else here</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-color1" href="#">Services</a>
+                                <a class="nav-link text-color1" href="{% url 'services' %}">Services</a>
                             </li>
                         </ul>
                         <ul class="nav justify-content-right navigation ">

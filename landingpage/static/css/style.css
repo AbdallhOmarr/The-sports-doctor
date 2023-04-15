@@ -4430,7 +4430,7 @@ div#mCSB_1_container{
 
 .service-page-section{
   position: relative;
-  padding: 120px 0px 90px 0px;
+  padding: 0px 0px 90px 0px;
 }
 
 .service-page-section .service-block-one .inner-box{
@@ -5960,7 +5960,35 @@ h3 {
 }
 
 
-
+/* 
 .bi-file-pdf:hover {
   color: red;
+} */
+
+
+.btn-color{
+  color: #ffffff!important;
+  background-color: #003113!important;
+}
+
+
+.btn-color:hover{
+  color: #ffffff!important;
+  background-color: #333!important;
+}
+
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+.bullet{
+    list-style-type: disc !important;
+    padding-left:1em !important;
+    margin-left:1em;
+
+}
+
+
+.card-bg{
+  background-color: #f7f7f9;
+}
+.bold{
+  font-weight: bold;
 }
