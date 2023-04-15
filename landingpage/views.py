@@ -72,7 +72,7 @@ def register(request):
                 "trainer_form": trainer_form,
                 "key": "register",
             }
-            return render(request, "home.html", context)
+            return render(request, "index.html", context)
         else:
             for field, errors in trainee_form.errors.items():
                 for error in errors:
@@ -98,7 +98,7 @@ def register(request):
                 "trainer_form": trainer_form,
                 "key": "register",
             }
-            return render(request, "home.html", context)
+            return render(request, "index.html", context)
         else:
             for field, errors in trainer_form.errors.items():
                 for error in errors:
