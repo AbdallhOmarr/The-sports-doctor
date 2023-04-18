@@ -5992,3 +5992,9 @@ h3 {
 .bold{
   font-weight: bold;
 }
+
+
+.service-img{
+  width: 230px;
+  height:220px;
+}

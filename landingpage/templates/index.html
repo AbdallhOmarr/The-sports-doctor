@@ -145,7 +145,7 @@
             </section>
             <!-- about-section end -->
             <!-- service-section -->
-            <section class="service-section sec-pad border-bottom">
+            <section id="services" class="service-section sec-pad border-bottom">
                 <div class="auto-container">
                     <div class="sec-title">
                         <p>Our Services</p>
@@ -154,12 +154,12 @@
                         </h2>
                     </div>
                     <div class="four-item-carousel owl-carousel owl-theme owl-dots-none">
-                        <div class="service-block-one">
+                        <div v-for="service in services" class="service-block-one">
                             <div class="inner-box">
                                 <div class="image-box">
                                     <figure class="image">
-                                        <a href="{% url 'service-detail' %}">
-                                            <img src="{% static 'images/service/service-1.jpg' %}" alt="">
+                                        <a :href="service.url">
+                                            <img :src="service.img" alt="">
                                         </a>
                                     </figure>
                                     <div class="icon-box">
@@ -168,13 +168,13 @@
                                 </div>
                                 <div class="lower-content">
                                     <h4>
-                                        <a href="{% url 'service-detail' %}">Physiotherapy</a>
+                                        <a :href="service.url">[[service.title]]</a>
                                     </h4>
                                     <p>
-                                        Lorem is free text no used by other agencies...
+                                        [[service.text]]
                                     </p>
                                     <div class="link">
-                                        <a href="{% url 'service-detail' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                                        <a :href="service.url"><i class="fas fa-chevron-circle-right"></i>Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -792,6 +792,26 @@
             </button>
         </div>
         {% include 'jsplugins.html' %}
+        <script>
+            Vue.createApp({
+                data() {
+                    return {
+                        services: []
+                    }
+                },
+                created() {
+                    fetch("{% url 'services_data'%}")
+                        .then(response => response.json())
+                        .then(data => {
+                            this.services = data;
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
+                },
+                delimiters: ["[[", "]]"]
+            }).mount("#services")
+        </script>
     </body>
     <!-- End of .page_wrapper -->
 </html>

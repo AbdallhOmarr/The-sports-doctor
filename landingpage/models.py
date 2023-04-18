@@ -21,3 +21,12 @@ class Trainee(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class Services(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=500)
+    long_text = models.CharField(max_length=200)
+    img = models.ImageField()
+    # url = models.CharField(max_length=200)
+

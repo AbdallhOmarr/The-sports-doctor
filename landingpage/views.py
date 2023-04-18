@@ -11,6 +11,7 @@ from . import models
 from django.contrib.auth.models import Group
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.templatetags.static import static
 
 
 @csrf_exempt
@@ -218,3 +219,33 @@ def services(request):
     context = {}
     return render(request, "services.html", context)
 
+
+from django.http import JsonResponse
+from .models import Services
+
+
+def services_data(request, service_id):
+    service = Services.objects.get(id=service_id)
+    data = {
+        "title": service.title,
+        "text": service.description,
+        "img": str(service.img),
+        "url": "#",
+    }
+    return JsonResponse(data)
+
+
+def all_services(request):
+    services = Services.objects.all()
+    data = []
+    for service in services:
+        data.append(
+            {
+                # str(service.img)
+                "title": service.title,
+                "text": service.description,
+                "img": static(str(service.img)),
+                "url": "#",
+            }
+        )
+    return JsonResponse(data, safe=False)

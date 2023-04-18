@@ -39,4 +39,10 @@ urlpatterns = [
         name="educational-materials",
     ),
     path("fellowships", views.fellowships, name="fellowships"),
+    path(
+        "services/<int:service_id>/data/",
+        views.services_data,
+        name="services_data_by_id",
+    ),
+    path("services_data", views.all_services, name="services_data"),
 ]

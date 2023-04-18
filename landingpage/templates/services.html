@@ -18,7 +18,7 @@
                             <div class="image-box">
                                 <figure class="image">
                                     <a :href="service.url">
-                                        <img :src="service.img" alt="">
+                                        <img class="service-img" :src="service.img" alt="">
                                     </a>
                                 </figure>
                                 <div class="icon-box">
@@ -45,48 +45,18 @@
         Vue.createApp({
             data() {
                 return {
-                    services: [{
-                            id: 1,
-                            url: "#",
-                            img: "{% static 'images/service/service-5.jpg' %}",
-                            title: "Service title here",
-                            text: "text here"
-                        }, {
-                            id: 2,
-                            url: "#",
-                            img: "{% static 'images/service/service-5.jpg' %}",
-                            title: "Service title here",
-                            text: "text here"
-                        }, {
-                            id: 3,
-                            url: "#",
-                            img: "{% static 'images/service/service-5.jpg' %}",
-                            title: "Service title here",
-                            text: "text here"
-                        }, {
-                            id: 4,
-                            url: "#",
-                            img: "{% static 'images/service/service-5.jpg' %}",
-                            title: "Service title here",
-                            text: "text here"
-                        }, {
-                            id: 5,
-                            url: "#",
-                            img: "{% static 'images/service/service-5.jpg' %}",
-                            title: "Service title here",
-                            text: "text here"
-                        }, {
-                            id: 6,
-                            url: "#",
-                            img: "{% static 'images/service/service-5.jpg' %}",
-                            title: "Service title here",
-                            text: "text here"
-                        }
-
-
-
-                    ]
+                    services: []
                 }
+            },
+            created() {
+                fetch("{% url 'services_data'%}")
+                    .then(response => response.json())
+                    .then(data => {
+                        this.services = data;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
             },
             delimiters: ["[[", "]]"]
         }).mount("#services")
