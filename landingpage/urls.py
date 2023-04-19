@@ -39,4 +39,5 @@ urlpatterns = [
         name="educational-materials",
     ),
     path("fellowships", views.fellowships, name="fellowships"),
+    path("blog", views.blog, name="blog"),
 ]

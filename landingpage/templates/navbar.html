@@ -92,6 +92,10 @@
                             <li class="nav-item">
                                 <a class="nav-link text-color1" href="{% url 'services' %}">Services</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-color1" href="{% url 'blog' %}">Blog</a>
+                            </li>
+
                         </ul>
                         <ul class="nav justify-content-right navigation ">
                             {% if request.user.is_authenticated %}
