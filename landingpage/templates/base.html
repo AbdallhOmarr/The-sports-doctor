@@ -42,10 +42,15 @@
     <link href="{% static 'css/global.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    {% include 'stylesheet.html' %}
+    <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon">
   </head>
   <body>
     {% comment %} {% include 'preloader.html' %} {% endcomment %}
+    {% comment %} {% include 'preloader.html' %} {% endcomment %}
     {% include 'navbar.html' %}
+    {% block pagetitle %}
+    {% endblock pagetitle %}
     <section class="body-section">
       <div class="container my-5">
         {% block body %}Default{% endblock %}

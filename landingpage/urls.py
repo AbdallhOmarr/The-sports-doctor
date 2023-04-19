@@ -40,4 +40,5 @@ urlpatterns = [
     ),
     path("fellowships", views.fellowships, name="fellowships"),
     path("blog", views.blog, name="blog"),
+    path("blog-details", views.blog_details, name="blog-details"),
 ]

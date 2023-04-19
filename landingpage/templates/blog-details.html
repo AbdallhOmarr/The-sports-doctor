@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    The sports doctor - Blog
+{% endblock title %}
+{% block pagetitle %}
+    <section class="page-title centred"
+             style="background-image: url({% static 'images/background/page-title.jpg' %})">
+        <div class="auto-container">
+            <div class="content-box">
+                <ul class="bread-crumb clearfix">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>Blog details</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock pagetitle %}
+{% block body %}
+    <!-- blog-details -->
+    <section class="blog-details sidebar-page-container sec-pad-2">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                    <div class="blog-details-content">
+                        <div class="news-block-one">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <img src="{% static 'images/news/news-7.jpg' %}" alt="">
+                                    <span class="post-date">23 June, 2020</span>
+                                </figure>
+                                <div class="lower-content">
+                                    <ul class="post-info clearfix">
+                                        <li>
+                                            <i class="far fa-user-circle"></i><a href="{% url 'home' %}">Admin</a>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-comments"></i><a href="{% url 'home' %}">7 Comments</a>
+                                        </li>
+                                    </ul>
+                                    <h2>How you can choose the best physiotherapy clinic</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, conse ctetur adipisicing elit sed do eiusm od tempor ut labore. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctornisi elit consequat ipsum. Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ndustry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum is simply dummy text of the new design printng and type setting Ipsum Take a look at our round up of the best shows coming soon to your telly box has been the is industrys. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has industr standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of.
+                                    </p>
+                                    <p>
+                                        Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ndustry stan when an unknown printer took a galley.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-share-option clearfix">
+                            <ul class="tags pull-left">
+                                <li>
+                                    <h4>Tags:</h4>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">injuries</a>,
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">treatments</a>,
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">physiotherapy</a>
+                                </li>
+                            </ul>
+                            <ul class="social-links pull-right">
+                                <li>
+                                    <a href="{% url 'blog-details' %}"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}"><i class="fab fa-facebook-square"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}"><i class="fab fa-pinterest-p"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="author-box">
+                            <div class="inner">
+                                <figure class="author-thumb">
+                                    <img src="{% static 'images/news/author-1.jpg' %}" alt="">
+                                </figure>
+                                <h4>Christine Eve</h4>
+                                <p>
+                                    Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed veritatis et quasi architecto.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments-area">
+                            <div class="group-title">
+                                <h2>2 Comments</h2>
+                            </div>
+                            <div class="comment-box">
+                                <div class="comment">
+                                    <figure class="thumb-box">
+                                        <img src="{% static 'images/news/comment-1.png' %}" alt="">
+                                    </figure>
+                                    <div class="comment-inner">
+                                        <h4>
+                                            Kevin Martin <span>20 June, 2020</span>
+                                        </h4>
+                                        <p>
+                                            Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                        </p>
+                                        <a href="{% url 'blog-details' %}">reply</a>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <figure class="thumb-box">
+                                        <img src="{% static 'images/news/comment-2.png' %}" alt="">
+                                    </figure>
+                                    <div class="comment-inner">
+                                        <h4>
+                                            Sarah Albert <span>19 June, 2020</span>
+                                        </h4>
+                                        <p>
+                                            Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                        </p>
+                                        <a href="{% url 'blog-details' %}">reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments-form-area">
+                            <div class="group-title">
+                                <h2>Leave a Comment</h2>
+                            </div>
+                            <form action="{% url 'blog-details' %}"
+                                  method="post"
+                                  class="comment-form default-form">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="text" name="name" placeholder="Your name" required="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="email" name="email" placeholder="Email address" required="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="text" name="phone" placeholder="Phone number" required="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="text" name="subject" placeholder="Subject" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <textarea name="message" placeholder="Write message"></textarea>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                        <button type="submit" class="theme-btn-one">Submit Comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                    <div class="sidebar">
+                        <div class="search-widget">
+                            <form action="{% url 'blog-details' %}" method="post" class="search-form">
+                                <div class="form-group">
+                                    <input type="search" name="search-field" placeholder="Search" required="">
+                                    <button type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="sidebar-widget post-widget">
+                            <div class="widget-title">
+                                <h3>Recent Posts</h3>
+                            </div>
+                            <div class="post-inner">
+                                <div class="post">
+                                    <figure class="post-thumb">
+                                        <a href="{% url 'blog-details' %}">
+                                            <img src="{% static 'images/news/post-1.jpg' %}" alt="">
+                                        </a>
+                                    </figure>
+                                    <span class="post-date">June 16, 2020</span>
+                                    <h5>
+                                        <a href="{% url 'blog-details' %}">Learn history of chiropractic care</a>
+                                    </h5>
+                                </div>
+                                <div class="post">
+                                    <figure class="post-thumb">
+                                        <a href="{% url 'blog-details' %}">
+                                            <img src="{% static 'images/news/post-2.jpg' %}" alt="">
+                                        </a>
+                                    </figure>
+                                    <span class="post-date">June 15, 2020</span>
+                                    <h5>
+                                        <a href="{% url 'blog-details' %}">How can we remove your pain</a>
+                                    </h5>
+                                </div>
+                                <div class="post">
+                                    <figure class="post-thumb">
+                                        <a href="{% url 'blog-details' %}">
+                                            <img src="{% static 'images/news/post-3.jpg' %}" alt="">
+                                        </a>
+                                    </figure>
+                                    <span class="post-date">June 14, 2020</span>
+                                    <h5>
+                                        <a href="{% url 'blog-details' %}">How can we remove your pain</a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget categories-widget">
+                            <div class="widget-title">
+                                <h3>
+                                    All Categories
+                                </h3>
+                            </div>
+                            <ul class="categories-list clearfix">
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Injuries<span>09</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Treatments<span>16</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Physiotherapy<span>23</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Massage Therapy<span>04</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Chiropratic<span>07</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-widget tags-widget">
+                            <div class="widget-title">
+                                <h3>
+                                    Tags
+                                </h3>
+                            </div>
+                            <ul class="tags-list clearfix">
+                                <li>
+                                    <a href="{% url 'blog-details' %}">injuries,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">treatments,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">physiotherapy,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">massage therapy,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">chiropratic,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">body pain,</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog-details end -->
+{% endblock body %}

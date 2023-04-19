@@ -3,201 +3,280 @@
 {% block title %}
     The sports doctor - Blog
 {% endblock title %}
+{% block pagetitle %}
+    <section class="page-title centred"
+             style="background-image: url({% static 'images/background/page-title.jpg' %})">
+        <div class="auto-container">
+            <div class="content-box">
+                <ul class="bread-crumb clearfix">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock pagetitle %}
 {% block body %}
-    <!-- blog-grid -->
-    <section class="blog-grid sec-pad-2">
+    <!-- blog-standard -->
+    <section class="blog-standard sidebar-page-container sec-pad-2">
         <div class="auto-container">
             <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated"
-                         data-wow-delay="00ms"
-                         data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <a href="blog-details.html">
-                                    <img src="{% static 'images/news/news-1.jpg' %}" alt="">
-                                </a>
-                                <span class="post-date">23 June, 2020</span>
-                            </figure>
-                            <div class="lower-content">
-                                <ul class="post-info clearfix">
-                                    <li>
-                                        <i class="far fa-user-circle"></i><a href="index.html">Admin</a>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-comments"></i><a href="index.html">7 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">How you can choose the best physiotherapy clinic</a>
-                                </h3>
-                                <p>Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing.</p>
-                                <div class="link">
-                                    <a href="blog-details.html"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                    <div class="blog-standard-content">
+                        <div class="news-block-one wow fadeInUp animated animated"
+                             data-wow-delay="00ms"
+                             data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <a href="{% url 'blog-details' %}">
+                                        <img src="{% static 'images/news/news-7.jpg' %}" alt="">
+                                    </a>
+                                    <span class="post-date">23 June, 2020</span>
+                                </figure>
+                                <div class="lower-content">
+                                    <ul class="post-info clearfix">
+                                        <li>
+                                            <i class="far fa-user-circle"></i><a href="{% url 'home' %}">Admin</a>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-comments"></i><a href="{% url 'home' %}">7 Comments</a>
+                                        </li>
+                                    </ul>
+                                    <h2>
+                                        <a href="{% url 'blog-details' %}">How you can choose the best physiotherapy clinic</a>
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    </p>
+                                    <div class="link">
+                                        <a href="{% url 'blog-details' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated"
-                         data-wow-delay="300ms"
-                         data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <a href="blog-details.html">
-                                    <img src="{% static 'images/news/news-2.jpg' %}" alt="">
-                                </a>
-                                <span class="post-date">22 June, 2020</span>
-                            </figure>
-                            <div class="lower-content">
-                                <ul class="post-info clearfix">
-                                    <li>
-                                        <i class="far fa-user-circle"></i><a href="index.html">Admin</a>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-comments"></i><a href="index.html">5 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Eat the right diet for your body to stay healthy</a>
-                                </h3>
-                                <p>Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing.</p>
-                                <div class="link">
-                                    <a href="blog-details.html"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                        <div class="news-block-one wow fadeInUp animated animated"
+                             data-wow-delay="00ms"
+                             data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <a href="{% url 'blog-details' %}">
+                                        <img src="{% static 'images/news/news-8.jpg' %}" alt="">
+                                    </a>
+                                    <span class="post-date">25 June, 2020</span>
+                                </figure>
+                                <div class="lower-content">
+                                    <ul class="post-info clearfix">
+                                        <li>
+                                            <i class="far fa-user-circle"></i><a href="{% url 'home' %}">Admin</a>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-comments"></i><a href="{% url 'home' %}">6 Comments</a>
+                                        </li>
+                                    </ul>
+                                    <h2>
+                                        <a href="{% url 'blog-details' %}">Eat the right diet for your body to stay healthy</a>
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    </p>
+                                    <div class="link">
+                                        <a href="{% url 'blog-details' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated"
-                         data-wow-delay="600ms"
-                         data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <a href="blog-details.html">
-                                    <img src="{% static 'images/news/news-3.jpg' %}" alt="">
-                                </a>
-                                <span class="post-date">21 June, 2020</span>
-                            </figure>
-                            <div class="lower-content">
-                                <ul class="post-info clearfix">
-                                    <li>
-                                        <i class="far fa-user-circle"></i><a href="index.html">Admin</a>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-comments"></i><a href="index.html">4 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">How can chiropractic care help your health system</a>
-                                </h3>
-                                <p>Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing.</p>
-                                <div class="link">
-                                    <a href="blog-details.html"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                        <div class="news-block-one wow fadeInUp animated animated"
+                             data-wow-delay="00ms"
+                             data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <a href="{% url 'blog-details' %}">
+                                        <img src="{% static 'images/news/news-9.jpg' %}" alt="">
+                                    </a>
+                                    <span class="post-date">26 June, 2020</span>
+                                </figure>
+                                <div class="lower-content">
+                                    <ul class="post-info clearfix">
+                                        <li>
+                                            <i class="far fa-user-circle"></i><a href="{% url 'home' %}">Admin</a>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-comments"></i><a href="{% url 'home' %}">2 Comments</a>
+                                        </li>
+                                    </ul>
+                                    <h2>
+                                        <a href="{% url 'blog-details' %}">How can chiropractic care help your health system</a>
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    </p>
+                                    <div class="link">
+                                        <a href="{% url 'blog-details' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated"
-                         data-wow-delay="00ms"
-                         data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <a href="blog-details.html">
-                                    <img src="{% static 'images/news/news-4.jpg' %}" alt="">
-                                </a>
-                                <span class="post-date">20 June, 2020</span>
-                            </figure>
-                            <div class="lower-content">
-                                <ul class="post-info clearfix">
-                                    <li>
-                                        <i class="far fa-user-circle"></i><a href="index.html">Admin</a>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-comments"></i><a href="index.html">7 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">The right diet for your body history of chiropr- actic care</a>
-                                </h3>
-                                <p>Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing.</p>
-                                <div class="link">
-                                    <a href="blog-details.html"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                        <div class="news-block-one wow fadeInUp animated animated"
+                             data-wow-delay="00ms"
+                             data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <a href="{% url 'blog-details' %}">
+                                        <img src="{% static 'images/news/news-10.jpg ' %}" alt="">
+                                    </a>
+                                    <span class="post-date">23 June, 2020</span>
+                                </figure>
+                                <div class="lower-content">
+                                    <ul class="post-info clearfix">
+                                        <li>
+                                            <i class="far fa-user-circle"></i><a href="{% url 'home' %}">Admin</a>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-comments"></i><a href="{% url 'home' %}">5 Comments</a>
+                                        </li>
+                                    </ul>
+                                    <h2>
+                                        <a href="{% url 'blog-details' %}">We can recover your body injury pain by exercise</a>
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    </p>
+                                    <div class="link">
+                                        <a href="{% url 'blog-details' %}"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated"
-                         data-wow-delay="300ms"
-                         data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <a href="blog-details.html">
-                                    <img src="{% static 'images/news/news-5.jpg' %}" alt="">
-                                </a>
-                                <span class="post-date">19 June, 2020</span>
-                            </figure>
-                            <div class="lower-content">
-                                <ul class="post-info clearfix">
-                                    <li>
-                                        <i class="far fa-user-circle"></i><a href="index.html">Admin</a>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-comments"></i><a href="index.html">5 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Learn history of chiropr- actic care remove your pain</a>
-                                </h3>
-                                <p>Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing.</p>
-                                <div class="link">
-                                    <a href="blog-details.html"><i class="fas fa-chevron-circle-right"></i>Read More</a>
-                                </div>
-                            </div>
+                        <div class="pagination-wrapper">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="{% url 'blog' %}"><i class="far fa-angle-left"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog' %}" class="active">01</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog' %}">02</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog' %}">03</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog' %}"><i class="far fa-angle-right"></i></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated"
-                         data-wow-delay="300ms"
-                         data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <a href="blog-details.html">
-                                    <img src="{% static 'images/news/news-5.jpg' %}" alt="">
-                                </a>
-                                <span class="post-date">19 June, 2020</span>
-                            </figure>
-                            <div class="lower-content">
-                                <ul class="post-info clearfix">
-                                    <li>
-                                        <i class="far fa-user-circle"></i><a href="index.html">Admin</a>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-comments"></i><a href="index.html">5 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Learn history of chiropr- actic care remove your pain</a>
-                                </h3>
-                                <p>
-                                    Lorem ipsum is simply free text used by new pesnhl note this copytyping refreshing.
-                                </p>
-                                <div class="link">
-                                    <a href="blog-details.html"><i class="fas fa-chevron-circle-right"></i>Read More</a>
+                <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                    <div class="sidebar">
+                        <div class="search-widget">
+                            <form action="{% url 'blog-details' %}" method="post" class="search-form">
+                                <div class="form-group">
+                                    <input type="search" name="search-field" placeholder="Search" required="">
+                                    <button type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="sidebar-widget post-widget">
+                            <div class="widget-title">
+                                <h3>Recent Posts</h3>
+                            </div>
+                            <div class="post-inner">
+                                <div class="post">
+                                    <figure class="post-thumb">
+                                        <a href="{% url 'blog-details' %}">
+                                            <img src="{% static 'images/news/post-1.jpg' %}" alt="">
+                                        </a>
+                                    </figure>
+                                    <span class="post-date">June 16, 2020</span>
+                                    <h5>
+                                        <a href="{% url 'blog-details' %}">Learn history of chiropractic care</a>
+                                    </h5>
+                                </div>
+                                <div class="post">
+                                    <figure class="post-thumb">
+                                        <a href="{% url 'blog-details' %}">
+                                            <img src="{% static 'images/news/post-2.jpg' %}" alt="">
+                                        </a>
+                                    </figure>
+                                    <span class="post-date">June 15, 2020</span>
+                                    <h5>
+                                        <a href="{% url 'blog-details' %}">How can we remove your pain</a>
+                                    </h5>
+                                </div>
+                                <div class="post">
+                                    <figure class="post-thumb">
+                                        <a href="{% url 'blog-details' %}">
+                                            <img src="{% static 'images/news/post-3.jpg' %}" alt="">
+                                        </a>
+                                    </figure>
+                                    <span class="post-date">June 14, 2020</span>
+                                    <h5>
+                                        <a href="{% url 'blog-details' %}">How can we remove your pain</a>
+                                    </h5>
                                 </div>
                             </div>
+                        </div>
+                        <div class="sidebar-widget categories-widget">
+                            <div class="widget-title">
+                                <h3>
+                                    All Categories
+                                </h3>
+                            </div>
+                            <ul class="categories-list clearfix">
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Injuries<span>09</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Treatments<span>16</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Physiotherapy<span>23</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Massage Therapy<span>04</span></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">Chiropratic<span>07</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-widget tags-widget">
+                            <div class="widget-title">
+                                <h3>
+                                    Tags
+                                </h3>
+                            </div>
+                            <ul class="tags-list clearfix">
+                                <li>
+                                    <a href="{% url 'blog-details' %}">injuries,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">treatments,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">physiotherapy,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">massage therapy,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">chiropratic,</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog-details' %}">body pain,</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- blog-grid end -->
-{% endblock %}
+    <!-- blog-standard end -->
+{% endblock body %}
