@@ -5992,3 +5992,9 @@ h3 {
 .bold{
   font-weight: bold;
 }
+
+.notification-icon{
+  width: 20px;
+  height:20px;
+  padding: 0 0 0 0 ;
+}

@@ -13,3 +13,4 @@ Webapp with landing page for clinic
 # done
 1. complete blog page
 view my profile tab in navbar after login
+

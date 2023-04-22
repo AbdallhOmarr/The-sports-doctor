@@ -95,14 +95,26 @@
                             <li class="nav-item">
                                 <a class="nav-link text-color1" href="{% url 'blog' %}">Blog</a>
                             </li>
-
                         </ul>
                         <ul class="nav justify-content-right navigation ">
                             {% if request.user.is_authenticated %}
-                                <li class="nav_item">
+                                <li class="nav-item dropdown-center">
+                                    <a class="nav-link text-color1 dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Notifications</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item text-color1" href="#">Notifications 123456478764645454546545646546546465</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link text-color1"  href="{% url 'profile' %}">My Profile</a>
                                 </li>
-                                <li class="nav_item">
+                                <li class="nav-item">
                                     <a class="nav-link text-color1" href="/">Hello, {{ request.user.username }}</a>
                                 </li>
                                 <li class="nav-item">
