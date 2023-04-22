@@ -68,6 +68,7 @@
                         <i class="icon-bar"></i>
                     </div>
                     <!-- end Mobile Navigation Toggler-->
+                    
                     <div class ="navbar" id="navbarSupportedContent">
                         <ul class="nav justify-content-start navigation ">
                             <li class="nav-item">
@@ -75,13 +76,8 @@
                                    href="{% url 'home' %}"
                                    aria-current="page">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-color1 dropdown-toggle"
-                                   data-toggle="dropdown"
-                                   href="#"
-                                   role="button"
-                                   aria-haspopup="true"
-                                   aria-expanded="false">Pages</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-color1" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item text-color1"
                                        href="{% url 'educational-materials' %}">Education Materials</a>
@@ -89,6 +85,7 @@
                                     <a class="dropdown-item text-color1" href="#">Something else here</a>
                                 </div>
                             </li>
+                                
                             <li class="nav-item">
                                 <a class="nav-link text-color1" href="{% url 'services' %}">Services</a>
                             </li>
@@ -98,18 +95,11 @@
                         </ul>
                         <ul class="nav justify-content-right navigation ">
                             {% if request.user.is_authenticated %}
-                                <li class="nav-item dropdown-center">
-                                    <a class="nav-link text-color1 dropdown-toggle"
-                                       data-toggle="dropdown"
-                                       href="#"
-                                       role="button"
-                                       aria-haspopup="true"
-                                       aria-expanded="false">Notifications</a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item text-color1" href="#">Notifications 123456478764645454546545646546546465</a>
-                                        </li>
-                                    </ul>
+                                <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-color1" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notifications</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item text-color1" href="#">Notifications</a>
+                                </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-color1"  href="{% url 'profile' %}">My Profile</a>
