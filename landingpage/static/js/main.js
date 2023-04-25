@@ -45,3 +45,10 @@ function showInjuryDetails() {
     injuryDetailsDiv.style.display = "none";
   }
 }
+
+
+
+// drop down menu animation 
+
+var dropdownmenu = document.getElementsByClassName("dropdown-menu")
+var down = false; 

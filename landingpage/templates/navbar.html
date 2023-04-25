@@ -104,10 +104,31 @@
                                        href="#"
                                        role="button"
                                        aria-haspopup="true"
-                                       aria-expanded="false">Notifications</a>
+                                       aria-expanded="false">
+                                        <img class="bell-image"
+                                             src="{% static 'images/bell.png' %}"
+                                             alt="notifications icon">
+                                    </a>
                                     <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item text-color1" href="#">Notifications 123456478764645454546545646546546465</a>
+                                        <li class="static_notification">
+                                            <div class="read_notification">
+                                                <div>
+                                                    <div class="notification_bio">
+                                                        <p>
+                                                            <span class="blue_bold_name">Admin</span> You have a trainee assigned to you
+                                                        </p>
+                                                    </div>
+                                                    <div class="notification_date">
+                                                        <p>5 day ago</p>
+                                                    </div>
+                                                    <div class="expand_comment">
+                                                        <p>notes</p>
+                                                    </div>
+                                                    <div>
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </li>

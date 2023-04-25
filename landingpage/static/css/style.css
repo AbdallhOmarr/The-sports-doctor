@@ -5998,3 +5998,56 @@ h3 {
   height:20px;
   padding: 0 0 0 0 ;
 }
+
+
+/* notification box */
+
+.bell-image{
+  width:25px;
+  height:25px;
+}
+.notification_image img{
+  width: 60px;
+}
+
+.read_notification{
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+.notification_bio p{
+  font-size: 1.1rem;
+  letter-spacing: .02rem;
+  color: hsl(219, 12%, 42%);
+  margin-bottom: 7px;
+  font-weight: 500;
+}
+.expand_comment{
+  border: 1px solid hsl(219, 19%, 83%);
+  padding: 1rem;
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+  border-radius: .4rem;
+}
+.expand_comment p{
+  font-size: 1.1rem;
+  color: hsl(219, 14%, 63%);
+}
+
+.notification_date p{
+  color: hsl(219, 14%, 63%);
+}
+.blue_bold_name{
+  color: #043404;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.gray_bold_text{
+  color: hsl(218, 18%, 54%);
+  font-weight: 600;
+}
