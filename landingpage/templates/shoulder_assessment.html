@@ -110,10 +110,143 @@
             <output for="pain" id="painValue2">5</output>
         </div>
     </div>
+
+    <div class="row ">
+        <div class="col">
+            <div class="form-group">
+                <div class="text-left">
+                    <label for="">Does your shoulder feel unstable?</label>
+                    <select id="shoulder-unstable-yes-no">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group text-left">
+                <label for="shoulderStability">How unstable is your shoulder?(on a scale of 1 to 10 where 10 is very unstable)</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="range"
+                   id="shoulderStability"
+                   name="shoulderStability"
+                   min="1"
+                   max="10"
+                   oninput="updateShoulderStability(this.value)">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <output for="shoulderStability" id="shoulderStabilityValue">5</output>
+        </div>
+    </div>
+
+    <hr style="font-size: 10px;">
+
+    <div class="row"><div class="col">
+        <div class="form-group text-left">
+            <h4>Activity Assessment</h4>
+            <label for="activities">
+                Choose the number in the box that indicate your ability to do the following activities:
+0 = Unable to do; 1 = very difficult to do; 2 = Somewhat difficult; 3 = Not difficult
+
+
+            </label>
+        </div>
+
+    </div></div>
+
+    <div class="row" >
+        <div class="col">
+            <div class="table-responsive" id='table_app'>
+                <table class="table table-secondary">
+                    <thead>
+                        <tr>
+                            <th scope="col-2">Activity</th>
+                            <th scope="col-3">Right Arm</th>
+                            <th scope="col-3">Left Arm</th>
+                        </tr>
+                    </thead>
+                    <tbody id="app">
+                        <tr v-for="(activity, index) in activities" :key="index">
+                            <td scope="row">[[activity.name ]]</td>
+                            <td >
+                                <div class="form-check form-check-inline" v-for="i in 4">
+                                    <input class="form-check-input" type="radio" name="[[activity.name]]" id="[[activity.name]]" value="[[i]]">
+                                    <label class="form-check-label" for="">[[i]]</label>
+                                </div>
+                            </td>
+                            <td >
+                                <div class="form-check form-check-inline" v-for="i in 4">
+                                    <input class="form-check-input" type="radio" name="[[activity.name]]" id="[[activity.name]]" value="[[i]]">
+                                    <label class="form-check-label" for="">[[i]]</label>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+                        
+        </div>
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col">
+            <div class="form-group text-left">
+                <h4>Physical Assessment</h4>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    createApp({
+        data() {
+            return {
+              activities: [
+                {
+                  name: 'Put on a Coat',
+                  rightArm: 0,
+                  leftArm: 0
+                },
+                {
+                  name: 'Brush Teeth',
+                  rightArm: 0,
+                  leftArm: 0
+                },
+                // add more activities as needed
+              ]
+              ,
+              radio_counts:[
+                1,2,3,4
+              ]
+            }
+        },
+            delimiters: ['[[', ']]'],
+
+
+    }).mount('#app');
+</script>
 <script>
     function updatePainValue2(val) {
         document.getElementById('painValue2').textContent = val;
 
     }
+    function updateShoulderStability(val) {
+        document.getElementById('shoulderStabilityValue').textContent = val;
+
+    }
+
 </script>

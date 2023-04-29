@@ -227,3 +227,8 @@ def blog(request):
 def blog_details(request):
     context = {}
     return render(request, "blog-details.html", context)
+
+
+def try_code(request):
+    context = {}
+    return render(request, "try_code.html", context)
