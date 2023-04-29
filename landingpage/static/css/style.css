@@ -6051,3 +6051,16 @@ h3 {
   color: hsl(218, 18%, 54%);
   font-weight: 600;
 }
+
+
+#pain {
+  width: 100%;
+}
+#max-pain {
+  width: 100%;
+}
+
+#pain-effect{
+  width: 100%;
+
+}

@@ -3,7 +3,6 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-
                     <div class="text-left">
                         <label for="">Have you had any injuries before?</label>
                         <select id="injury-yes-no" onchange="showInjuryDetails()">
@@ -12,71 +11,86 @@
                         </select>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <div id="injury-details" style="display: none;" class="row">
             <div class="col">
                 <div class="form-group">
                     <div class="text-left">Past Injuries</div>
                     <div class="injuries">
                         <div class="injury">
-                            <input type="date" name="injury-date[]" class="form-control" placeholder="Injury date">
-                            <textarea class="form-control" name="injury-details[]" rows="3"
-                                placeholder="Enter injury details"></textarea>
+                            <input type="date"
+                                   name="injury-date[]"
+                                   class="form-control"
+                                   placeholder="Injury date">
+                            <textarea class="form-control"
+                                      name="injury-details[]"
+                                      rows="3"
+                                      placeholder="Enter injury details"></textarea>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-secondary btn-sm mt-2" onclick="addInjury()">Add another
-                        injury</button>
+                    <button type="button"
+                            class="btn btn-secondary btn-sm mt-2"
+                            onclick="addInjury()">
+                        Add another
+                        injury
+                    </button>
                 </div>
             </div>
         </div>
         <hr>
         <div class="row">
-            <div class="col text-left">
-                Does you suffer from any of the following diseases?
-            </div>
+            <div class="col text-left">Does you suffer from any of the following diseases?</div>
         </div>
-
         <div class="row">
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Highbloodpressure-checkbox" class="mr-2">High blood pressure</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Highbloodpressure-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Highbloodpressure-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Heartdiseases-checkbox" class="mr-2">Heart diseases</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Heartdiseases-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Heartdiseases-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Stomachulcers-checkbox" class="mr-2">Stomach ulcers</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Stomachulcers-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Stomachulcers-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Bloodclots-checkbox" class="mr-2">Blood clots</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Bloodclots-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Bloodclots-checkbox">
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Rheumatoidarthritis-checkbox" class="mr-2">Rheumatoid arthritis</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Rheumatoidarthritis-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Rheumatoidarthritis-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Kidneydisorders-checkbox" class="mr-2">Kidney disorders</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Kidneydisorders-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Kidneydisorders-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
@@ -88,23 +102,27 @@
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Skindiseases-checkbox" class="mr-2">Skin diseases</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Skindiseases-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Skindiseases-checkbox">
                 </div>
             </div>
         </div>
-
-
         <div class="row">
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Thyroiddisorders-checkbox" class="mr-2">Thyroid disorders</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Thyroiddisorders-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Thyroiddisorders-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Diabetesdisorders-checkbox" class="mr-2">Diabetes disorders</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Diabetesdisorders-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Diabetesdisorders-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
@@ -116,16 +134,19 @@
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Lungdisorders-checkbox" class="mr-2">Lung disorders</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Lungdisorders-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Lungdisorders-checkbox">
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-3 d-flex justify-content-start">
                 <div class="form-check form-check-inline text-left">
                     <label for="Heartstroke-checkbox" class="mr-2">Heart stroke</label>
-                    <input class="form-check-input mb-1" type="checkbox" id="Heartstroke-checkbox">
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="Heartstroke-checkbox">
                 </div>
             </div>
             <div class="col-3 d-flex justify-content-start">
@@ -135,13 +156,10 @@
                 </div>
             </div>
         </div>
-
         <hr>
-
         <div class="row">
             <div class="col">
                 <div class="form-group">
-
                     <div class="text-left">
                         <label for="">Have you ever been diagnosed with an immunodeficiency disease?</label>
                         <select>
@@ -150,11 +168,8 @@
                         </select>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -168,221 +183,261 @@
                 </div>
             </div>
         </div>
-
-
         <div id="covid-details" style="display: none;" class="row">
             <div class="col">
                 <div class="form-group">
                     <div class="text-left">
                         <label for="">How many times have you been diagnosed with COVID-19?</label>
-                        <input type="number" class="form-control" id="covid-count"
-                            placeholder="Enter number of diagnoses">
+                        <input type="number"
+                               class="form-control"
+                               id="covid-count"
+                               placeholder="Enter number of diagnoses">
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
         <div id="covid-details2" style="display: none;" class="row">
             <div class="col">
                 <div class="form-group">
                     <div class="text-left">
-                        <label for="">Have you taken the COVID-19 vaccine?</label>
+                        <label for="">
+                            Have you taken the COVID-19 vaccine?
+                        </label>
                         <select id="COVIDVaccine-yes-no" onchange="showCOVIDVaccineDetails()">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
+                            <option value="no">
+                                No
+                            </option>
+                            <option value="yes">
+                                Yes
+                            </option>
                         </select>
                     </div>
                 </div>
             </div>
         </div>
-
         <div id="COVIDVaccine-details" style="display: none;" class="row">
             <div class="col">
                 <div class="form-group">
                     <div class="text-left">
-                        <label for="">How many doses have you taken?</label>
-                        <input type="number" class="form-control" id="covid-count" placeholder="Enter number of doses">
+                        <label for="">
+                            How many doses have you taken?
+                        </label>
+                        <input type="number"
+                               class="form-control"
+                               id="covid-count"
+                               placeholder="Enter number of doses">
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
         <div id="COVIDVaccine-details2" style="display: none;" class="row">
             <div class="row">
                 <div class="col-6 d-flex justify-content-start">
-                    <label for="vaccine-type">Which vaccine did you receive?</label>
+                    <label for="vaccine-type">
+                        Which vaccine did you receive?
+                    </label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-4 d-flex justify-content-start">
                     <div class="form-check form-check-inline text-left">
-                        <label for="Pfizer-BioNTech-checkbox" class="mr-2">Pfizer-BioNTech</label>
-                        <input class="form-check-input mb-1" type="checkbox" id="Pfizer-BioNTech-checkbox">
+                        <label for="Pfizer-BioNTech-checkbox" class="mr-2">
+                            Pfizer-BioNTech
+                        </label>
+                        <input class="form-check-input mb-1"
+                               type="checkbox"
+                               id="Pfizer-BioNTech-checkbox">
                     </div>
                 </div>
                 <div class="col-4 d-flex justify-content-start">
                     <div class="form-check form-check-inline text-left">
-                        <label for="moderna-checkbox" class="mr-2">moderna</label>
+                        <label for="moderna-checkbox" class="mr-2">
+                            moderna
+                        </label>
                         <input class="form-check-input mb-1" type="checkbox" id="moderna-checkbox">
                     </div>
                 </div>
                 <div class="col-4 d-flex justify-content-start">
                     <div class="form-check form-check-inline text-left">
-                        <label for="Johnson-checkbox" class="mr-2">Johnson & Johnson's Janssen</label>
+                        <label for="Johnson-checkbox" class="mr-2">
+                            Johnson & Johnson's Janssen
+                        </label>
                         <input class="form-check-input mb-1" type="checkbox" id="Johnson-checkbox">
                     </div>
                 </div>
-
             </div>
             <div class="row">
                 <div class="col-4 d-flex justify-content-start">
                     <div class="form-check form-check-inline text-left">
-                        <label for="astrazeneca-checkbox" class="mr-2">AstraZeneca</label>
-                        <input class="form-check-input mb-1" type="checkbox" id="astrazeneca-checkbox">
+                        <label for="astrazeneca-checkbox" class="mr-2">
+                            AstraZeneca
+                        </label>
+                        <input class="form-check-input mb-1"
+                               type="checkbox"
+                               id="astrazeneca-checkbox">
                     </div>
                 </div>
                 <div class="col-4 d-flex justify-content-start">
                     <div class="form-check form-check-inline text-left">
-                        <label for="sinovac-checkbox" class="mr-2">Sinovac</label>
+                        <label for="sinovac-checkbox" class="mr-2">
+                            Sinovac
+                        </label>
                         <input class="form-check-input mb-1" type="checkbox" id="sinovac-checkbox">
                     </div>
                 </div>
                 <div class="col-4 d-flex justify-content-start">
                     <div class="form-check form-check-inline text-left">
-                        <label for="sputnik-checkbox" class="mr-2">Sputnik V</label>
+                        <label for="sputnik-checkbox" class="mr-2">
+                            Sputnik V
+                        </label>
                         <input class="form-check-input mb-1" type="checkbox" id="sputnik-checkbox">
                     </div>
                 </div>
-
             </div>
-
-
         </div>
-
-
         <div class="row">
             <div class="col">
                 <div class="form-group">
-
                     <div class="text-left">
-                        <label for="">Have you been diagnosed with any liver diseases?</label>
+                        <label for="">
+                            Have you been diagnosed with any liver diseases?
+                        </label>
                         <select>
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
+                            <option value="no">
+                                No
+                            </option>
+                            <option value="yes">
+                                Yes
+                            </option>
                         </select>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
-
-
-
         <div class="row">
             <div class="col">
                 <div class="form-group">
-
                     <div class="text-left">
-                        <label for="">Have you had any surgeries before?</label>
+                        <label for="">
+                            Have you had any surgeries before?
+                        </label>
                         <select id="surgery-yes-no" onchange="showSurgeryDetails()">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
+                            <option value="no">
+                                No
+                            </option>
+                            <option value="yes">
+                                Yes
+                            </option>
                         </select>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <div id="surgery-details" style="display: none;" class="row">
             <div class="col">
                 <div class="form-group">
-                    <div class="text-left">Past surgery</div>
+                    <div class="text-left">
+                        Past surgery
+                    </div>
                     <div class="surgeries">
                         <div class="surgery">
-                            <input type="date" name="surgery-date[]" class="form-control" placeholder="surgery date">
-                            <textarea class="form-control" name="surgery-details[]" rows="3"
-                                placeholder="Enter surgery details"></textarea>
+                            <input type="date"
+                                   name="surgery-date[]"
+                                   class="form-control"
+                                   placeholder="surgery date">
+                            <textarea class="form-control"
+                                      name="surgery-details[]"
+                                      rows="3"
+                                      placeholder="Enter surgery details"></textarea>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-secondary btn-sm mt-2" onclick="addSurgery()">Add another
-                        surgery</button>
+                    <button type="button"
+                            class="btn btn-secondary btn-sm mt-2"
+                            onclick="addSurgery()">
+                        Add another
+                        surgery
+                    </button>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
                 <div class="form-group">
-
                     <div class="text-left">
-                        <label for="">Do you take any medication regularly?</label>
+                        <label for="">
+                            Do you take any medication regularly?
+                        </label>
                         <select id="medication-yes-no" onchange="showMedicationDetails()">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
+                            <option value="no">
+                                No
+                            </option>
+                            <option value="yes">
+                                Yes
+                            </option>
                         </select>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <div id="medication-details" style="display: none;" class="row">
             <div class="col">
                 <div class="form-group">
                     <div class="medication">
-                        <div class="text-left">medication name</div>
-                        <input class="form-control" name="medication-details[]" rows="1"
-                            placeholder="Enter medication Name">
-                        <div class="text-left">medication Doeses</div>
-                        <input class="form-control" name="medication-details[]" rows="1"
-                            placeholder="Enter medication Doses">
+                        <div class="text-left">
+                            medication name
+                        </div>
+                        <input class="form-control"
+                               name="medication-details[]"
+                               rows="1"
+                               placeholder="Enter medication Name">
+                        <div class="text-left">
+                            medication Doeses
+                        </div>
+                        <input class="form-control"
+                               name="medication-details[]"
+                               rows="1"
+                               placeholder="Enter medication Doses">
                     </div>
-                    <button type="button" class="btn btn-secondary btn-sm mt-2" onclick="addMedication()">Add another
-                        medication</button>
+                    <button type="button"
+                            class="btn btn-secondary btn-sm mt-2"
+                            onclick="addMedication()">
+                        Add another
+                        medication
+                    </button>
                 </div>
             </div>
         </div>
-
         <div class="row my-3">
             <div class="col">
                 <div class="form-group">
-                    <div class="text-left">Allergies</div>
-                    <textarea class="form-control" id="medications" rows="3"
-                        placeholder="Do you have any allergies to food, medication, or any other substances?"></textarea></textarea>
-
+                    <div class="text-left">
+                        Allergies
+                    </div>
+                    <textarea class="form-control"
+                              id="medications"
+                              rows="3"
+                              placeholder="Do you have any allergies to food, medication, or any other substances?"></textarea></textarea>
                 </div>
-
             </div>
         </div>
-
-
         <div class="row my-3">
             <div class="col">
-                <button type="submit" class="btn btn-secondary w-100">Update</button>
+                <button type="submit" class="btn btn-secondary w-100">
+                    Update
+                </button>
             </div>
         </div>
     </form>
 </div>
-
-
 <script>
     function addInjury() {
         var newInjury = document.createElement("div");
         newInjury.innerHTML = `
-        <div class="injury mt-3">
-            <input type="date" name="injury-date[]" class="form-control" placeholder="Injury date">
-            <textarea class="form-control" name="injury-details[]" rows="3" placeholder="Enter injury details"></textarea>
-        </div>
-    `;
+                <div class="injury mt-3">
+                    <input type="date" name="injury-date[]" class="form-control" placeholder="Injury date">
+                    <textarea class="form-control" name="injury-details[]" rows="3" placeholder="Enter injury details"></textarea>
+                </div>
+            `;
         var injuries = document.querySelector(".injuries");
         injuries.appendChild(newInjury);
     }
@@ -413,6 +468,7 @@
 
         }
     }
+
     function showCOVIDVaccineDetails() {
         var selectElement = document.getElementById("COVIDVaccine-yes-no");
         var injuryDetailsDiv = document.getElementById("COVIDVaccine-details");
@@ -434,11 +490,17 @@
     function addSurgery() {
         var newInjury = document.createElement("div");
         newInjury.innerHTML = `
-        <div class="surgery mt-3">
-            <input type="date" name="surgery-date[]" class="form-control" placeholder="Surgery date">
-            <textarea class="form-control" name="surgery-details[]" rows="3" placeholder="Enter surgery details"></textarea>
-        </div>
-    `;
+                <div class="surgery mt-3">
+                    <input type="date"
+                           name="surgery-date[]"
+                           class="form-control"
+                           placeholder="Surgery date">
+                    <textarea class="form-control"
+                              name="surgery-details[]"
+                              rows="3"
+                              placeholder="Enter surgery details"></textarea>
+                </div>
+            `;
         var injuries = document.querySelector(".surgeries");
         injuries.appendChild(newInjury);
     }
@@ -461,15 +523,15 @@
     function addMedication() {
         var newInjury = document.createElement("div");
         newInjury.innerHTML = `
-        <div class="medication">
-                        <div class="text-left">medication name</div>
-                        <input class="form-control" name="medication-details[]" rows="1"
-                            placeholder="Enter medication Name">
-                        <div class="text-left">medication Doeses</div>
-                        <input class="form-control" name="medication-details[]" rows="1"
-                            placeholder="Enter medication Doses">
-                    </div>
-    `;
+                <div class="medication">
+                                <div class="text-left">medication name</div>
+                                <input class="form-control" name="medication-details[]" rows="1"
+                                    placeholder="Enter medication Name">
+                                <div class="text-left">medication Doeses</div>
+                                <input class="form-control" name="medication-details[]" rows="1"
+                                    placeholder="Enter medication Doses">
+                            </div>
+            `;
         var injuries = document.querySelector(".medication");
         injuries.appendChild(newInjury);
     }
@@ -485,5 +547,4 @@
             injuryDetailsDiv.style.display = "none";
         }
     }
-
 </script>

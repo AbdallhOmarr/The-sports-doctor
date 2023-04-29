@@ -51,4 +51,6 @@ function showInjuryDetails() {
 // drop down menu animation 
 
 var dropdownmenu = document.getElementsByClassName("dropdown-menu")
-var down = false; 
+var down = false;
+
+

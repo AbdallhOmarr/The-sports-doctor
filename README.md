@@ -4,7 +4,6 @@ Webapp with landing page for clinic
 
 
 # to do 
-4. find hosting service free
 3. complete forms 
 
 # doing
@@ -15,3 +14,4 @@ Webapp with landing page for clinic
 view my profile tab in navbar after login
 2. add notification to the navbar 
 
+4. find hosting service free

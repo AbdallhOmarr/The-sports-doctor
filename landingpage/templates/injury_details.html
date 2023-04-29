@@ -1,0 +1,440 @@
+<div>
+    <form>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="injury">Where are you injured?</label>
+                    <textarea class="form-control" id="injury" name="injury" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="pain">How much pain are you feeling (on a scale of 1 to 10)?</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="range"
+                       id="pain"
+                       name="pain"
+                       min="1"
+                       max="10"
+                       oninput="updatePainValue(this.value)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <output for="pain" id="painValue">5</output>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="max-pain">What is the maximum pain you have felt due to that injury (on a scale of 1 to 10)?</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="range"
+                       id="max-pain"
+                       name="max-pain"
+                       min="1"
+                       max="10"
+                       oninput="updateMaxPainValue(this.value)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <output for="max-pain" id="max-painValue">5</output>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="pain-effect">
+                        To what extent does your injury affect your ability to practice sports (on a scale of 1 to 10)?
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="range"
+                       id="pain-effect"
+                       name="pain-effect"
+                       min="1"
+                       max="10"
+                       oninput="updatePainEffectValue(this.value)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <output for="pain-effect" id="pain-effectValue">5</output>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group text-left">
+                    <label for="date-of-injury">When did you get injured?</label>
+                    <input type="date"
+                           name="injury-date"
+                           id="injury-date"
+                           class="form-control"
+                           placeholder="injury date">
+                </div>
+            </div>
+            <div id="durationofinjury" class="col">
+                <div class="form-group text-left">
+                    <label for="duration-of-injury">
+                        How long have you been unable to participate in sports due to the injury? (in days)
+                    </label>
+                    <input class="form-control"
+                           type="text"
+                           name="durationofinjury"
+                           id="durationofinjury">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="">Is your injury related to your exercise or not?</label>
+                        <select id="injury-sports-related-yes-no">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="injuryDescription">Descripe how the injury happened in details</label>
+                    <textarea class="form-control"
+                              id="injuryDescription"
+                              name="injuryDescription"
+                              rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="">Did you get your injury examined by a doctor?</label>
+                        <select id="injury-examined-yes-no">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="doctor-details">If yes Then state the doctor name and his contact details</label>
+                    <textarea class="form-control"
+                              id="doctor-details"
+                              name="doctor-details"
+                              rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="doctor-diagnoses">What is the doctor diagnoses for this injury?</label>
+                    <textarea class="form-control"
+                              id="doctor-diagnoses"
+                              name="doctor-diagnoses"
+                              rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="medication">What is the type of medication you have prescribed for this injury?</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3 d-flex flex-row" id="reach">
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="medical-treatment" class="mr-2">medical treatment</label>
+                        <input class="form-check-input mb-1"
+                               type="checkbox"
+                               id="medical-treatment-checkbox">
+                    </div>
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="physical-therapy-checkbox" class="mr-2">Physical therapy</label>
+                        <input class="form-check-input mb-1"
+                               type="checkbox"
+                               id="physical-therapy-checkbox">
+                    </div>
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="sports-rehabilitation-checkbox" class="mr-2">Sports rehabilitation</label>
+                        <input class="form-check-input mb-1"
+                               type="checkbox"
+                               id="sports-rehabilitation-checkbox">
+                    </div>
+                    <div class="form-check form-check-inline text-left mr-5">
+                        <label for="rest-checkbox" class="mr-2">rest</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="rest-checkbox">
+                    </div>
+                    <div class="form-check form-check-inline text-left">
+                        <label for="othermed-checkbox" class="mr-2">Other</label>
+                        <input class="form-check-input mb-1" type="checkbox" id="othermed-checkbox">
+                        <input type="text " name="othermed" class="form-control w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="">Are you currently undergoing any medical procedures regarding your injury?</label>
+                        <select id="undergoing-medical-procedures-yes-no">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group text-left">
+                    <label for="therapist-details">state the therapist name and his contact details</label>
+                    <textarea class="form-control"
+                              id="therapist-details"
+                              name="therapist-details"
+                              rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="">Have you ever had an injury in the same place before?</label>
+                        <select id="pre-injury-check-yes-no">
+                            <option value="no">
+                                No
+                            </option>
+                            <option value="yes">
+                                Yes
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="">
+                            If yes, does it related to Excerising?
+                        </label>
+                        <select id="excerising-related-yes-no">
+                            <option value="no">
+                                No
+                            </option>
+                            <option value="yes">
+                                Yes
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="text-left">
+                        <label for="">
+                            Did you undergo diagnostic imaging for your injury under the supervision of a doctor?
+                        </label>
+                        <select id="undergo-diagnostic-imaging-yes-no">
+                            <option value="no">
+                                No
+                            </option>
+                            <option value="yes">
+                                Yes
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3 d-flex flex-row" id="reach">
+                <div class="form-check form-check-inline text-left mr-5">
+                    <label for="X-Ray" class="mr-2">
+                        X-Ray
+                    </label>
+                    <input class="form-check-input mb-1" type="checkbox" id="X-Ray-checkbox">
+                </div>
+                <div class="form-check form-check-inline text-left mr-5">
+                    <label for="MRI-checkbox" class="mr-2">
+                        MRI (Magnetic Resonance Imaging)
+                    </label>
+                    <input class="form-check-input mb-1" type="checkbox" id="MRI-checkbox">
+                </div>
+                <div class="form-check form-check-inline text-left mr-5">
+                    <label for="CT-checkbox" class="mr-2">
+                        CT (Computed Tomography)
+                    </label>
+                    <input class="form-check-input mb-1" type="checkbox" id="CT-checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3 d-flex flex-row" id="reach">
+                <div class="form-check form-check-inline text-left mr-5">
+                    <label for="Dye-X-Ray-checkbox" class="mr-2">
+                        Dye X-Ray
+                    </label>
+                    <input class="form-check-input mb-1" type="checkbox" id="Dye-X-Ray-checkbox">
+                </div>
+                <div class="form-check form-check-inline text-left mr-5">
+                    <label for="EMG-checkbox" class="mr-2">
+                        EMG (Electromyography)
+                    </label>
+                    <input class="form-check-input mb-1" type="checkbox" id="EMG-checkbox">
+                </div>
+                <div class="form-check form-check-inline text-left mr-5">
+                    <label for="NCS-checkbox" class="mr-2">
+                        NCS (Nerve Conduction Studies)
+                    </label>
+                    <input class="form-check-input mb-1" type="checkbox" id="NCS-checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3 d-flex flex-row" id="reach">
+                <div class="form-check form-check-inline text-left mr-5">
+                    <label for="Bone-Scan-checkbox" class="mr-2">
+                        Bone Scan
+                    </label>
+                    <input class="form-check-input mb-1" type="checkbox" id="Bone-Scan-checkbox">
+                </div>
+                <div class="form-check form-check-inline text-left">
+                    <label for="other-scan-checkbox" class="mr-2">
+                        Other
+                    </label>
+                    <input class="form-check-input mb-1"
+                           type="checkbox"
+                           id="other-scan-checkbox">
+                    <input type="text " name="other-scan" class="form-control w-100">
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col">
+                <button type="submit" class="btn btn-secondary w-100">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    createApp({
+        data() {
+            return {
+                selectedDuration: 1
+            }
+        },
+        delimiters: ["[[", "]]"]
+    }).mount('#durationofinjury');
+</script>
+<script>
+    function updatePainValue(val) {
+        document.getElementById('painValue').textContent = val;
+
+    }
+
+    function updateMaxPainValue(val) {
+        document.getElementById('max-painValue').textContent = val;
+
+    }
+
+    function updatePainEffectValue(val) {
+        document.getElementById('pain-effectValue').textContent = val;
+
+    }
+</script>
+<script>
+    function showAlcoholsOptions() {
+        var selectElement = document.getElementById("alchols_selections");
+        var alchols_options = document.getElementById("alchols_options");
+        console.log(alchols_options)
+        if (selectElement.value == "yes") {
+            alchols_options.style.display = "inline-flex";
+        } else {
+            alchols_options.style.display = "none";
+
+        }
+
+    }
+
+    function showSmokeOptions() {
+        var selectElement = document.getElementById("smoke_selections");
+        var smoke_options = document.getElementById("smoke_options");
+        if (selectElement.value == "yes") {
+            smoke_options.style.display = "inline-flex";
+        } else {
+            smoke_options.style.display = "none";
+
+        }
+
+    }
+
+    function showDrugOptions() {
+        var selectElement = document.getElementById("drug_selections");
+        var drug_options = document.getElementById("drug_options");
+        if (selectElement.value == "yes") {
+            drug_options.style.display = "inline-flex";
+        } else {
+            drug_options.style.display = "none";
+
+        }
+
+    }
+
+    function longSittingHours() {
+        var selectElement = document.getElementById("long-sitting");
+        var drug_options = document.getElementById("sittingTime");
+        if (selectElement.value == "yes") {
+            drug_options.style.display = "inline-flex";
+        } else {
+            drug_options.style.display = "none";
+
+        }
+
+    }
+
+    function showMovementsDetails() {
+        var selectElement = document.getElementById("repetitive-movements");
+        var drug_options = document.getElementById("movementsWork");
+        if (selectElement.value == "yes") {
+            drug_options.style.display = "inline-flex";
+        } else {
+            drug_options.style.display = "none";
+
+        }
+
+    }
+</script>
