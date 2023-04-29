@@ -21,13 +21,16 @@
           <a class="nav-link" data-bs-toggle="tab" href="#family-history">Family History</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#shoulder-assessment">Shoulder Assessment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#lumber-spine">Lumbar Spine Assessment</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" href="#social">Social Info</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" href="#subscriptions">Subscriptions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#physical-assessment">Physical Assessment</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" href="#treatment-plan">Treatment Plan</a>
@@ -67,6 +70,18 @@
         </div>
       </div>
       <div class="tab-content">
+        <div class="tab-pane" id="shoulder-assessment">
+          <!-- lumber-spine form fields -->
+          {% include 'shoulder_assessment.html' %}
+        </div>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane" id="lumber-spine">
+          <!-- lumber-spine form fields -->
+          {% include 'lumbar_spine_assessment.html' %}
+        </div>
+      </div>
+      <div class="tab-content">
         <div class="tab-pane" id="social">
           <!-- social info form fields -->
           {% include 'social_info.html' %}
@@ -76,12 +91,6 @@
         <div class="tab-pane" id="subscriptions">
           <!-- Subscriptions form fields -->
           {% include 'subscriptions.html' %}
-        </div>
-      </div>
-      <div class="tab-content">
-        <div class="tab-pane" id="physical-assessment">
-          <!-- Physical Assessment form fields -->
-          {% include 'physical_assessment.html' %}
         </div>
       </div>
       <div class="tab-content">

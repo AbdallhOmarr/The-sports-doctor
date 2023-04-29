@@ -1,0 +1,119 @@
+<div>
+    <div class="row">
+        <div class="col">
+            <h4 class="text-left">Self-evaluation</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="row my-3">
+        <div class="col">
+            <div class="form-group">
+                <div class="text-left">
+                    <label for="">Are you having pain In your shoulder?</label>
+                    <select id="shoulder-pain-yes-no">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col">
+            <div class="form-group">
+                <div class="text-left">
+                    <label for="">Do you have pain in your shoulder at night?</label>
+                    <select id="shoulder-pain--night-yes-no">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="text-left">
+                    <label for="">Do you take pain medications?</label>
+                    <select id="pain-medication-yes-no">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="text-left">
+                    <label for="">Do you take narcotic pain medications?</label>
+                    <select id="narcotic-pain-medications-yes-no">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <div class="text-left">
+                    <label for="pills-count">How many pills do you take each day (average)?</label>
+                    <input type="text" name="pills-count" id="pills-count" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <div class="text-left">
+                    <div class="mb-3">
+                        <label for="pain-location" class="form-label">Please specifiy the pain location</label>
+                        <select class="form-select form-select-md"
+                                name="pain-location"
+                                id="pain-location">
+                            <option selected>Select one</option>
+                            <option value="">Your right side</option>
+                            <option value="">Neck</option>
+                            <option value="">Your left side</option>
+                            <option value="">Elbow</option>
+                            <option value="">Upper back</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group text-left">
+                <label for="pain">How bad is your pain today (on a scale of 1 to 10 where 10 is very bad)?</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="range"
+                   id="pain"
+                   name="pain"
+                   min="1"
+                   max="10"
+                   oninput="updatePainValue2(this.value)">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <output for="pain" id="painValue2">5</output>
+        </div>
+    </div>
+</div>
+<script>
+    function updatePainValue2(val) {
+        document.getElementById('painValue2').textContent = val;
+
+    }
+</script>
