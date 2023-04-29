@@ -5,7 +5,9 @@ Webapp with landing page for clinic
 
 # to do 
 3. complete forms 
-
+    1. استماره تسجيل بيانات الشخصيه
+    2. Shoulder assessment pages: 4 pages
+    3. lumber assessment pages: 1 page
 # doing
 
 
