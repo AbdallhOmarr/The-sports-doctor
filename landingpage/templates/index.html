@@ -13,6 +13,8 @@
         </title>
         <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon">
         {% include 'stylesheet.html' %}
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     </head>
     <!-- page wrapper -->
     <body>
@@ -792,6 +794,8 @@
             </button>
         </div>
         {% include 'jsplugins.html' %}
+        <script src="{% static 'js/vueComp.js'%}"></script>
+
     </body>
     <!-- End of .page_wrapper -->
 </html>

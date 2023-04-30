@@ -20,6 +20,15 @@
         "python.formatting.provider": "black",
         "python.linting.pylintEnabled": false,
         "djlint.formatCss": true,
-        "djlint.formatJs": true
+        "djlint.formatJs": true,
+        "[html]": {
+          "editor.defaultFormatter": "monosans.djlint"
+        },
+        "[django-html]": {
+          "editor.defaultFormatter": "monosans.djlint"
+        },
+        "editor.formatOnSave": true,
+        
       
 }
+

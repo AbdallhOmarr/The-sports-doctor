@@ -349,19 +349,7 @@
         </div>
     </form>
 </div>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script>
-    createApp({
-        data() {
-            return {
-                selectedDuration: 1,
-                check_vue_label:1,
-            }
-        },
-        delimiters: ['[[', ']]']
 
-    }).mount('#durationofinjury');
-</script>
 <script>
     function updatePainValue(val) {
         document.getElementById('painValue').textContent = val;
